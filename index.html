@@ -7,8 +7,9 @@
   <title>首爾 x 釜山</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="enhancements.css">
 </head>
 <body>
 <div class="app">
@@ -118,9 +119,16 @@
 
     <section id="language" class="page">
       <div class="section page-head">
-        <div class="section-title"><h2>Papago 翻譯</h2><small>中文 ⇄ 韓文</small></div>
-        <article class="card translate-card"><div class="translator-controls"><select id="translateDirection"><option value="zh-TW|ko">中文 → 韓文</option><option value="ko|zh-TW">韓文 → 中文</option></select><button class="icon-btn" id="swapLanguage" type="button">⇄</button></div><textarea id="translateInput" rows="5" maxlength="500" placeholder="輸入要翻譯的句子"></textarea><button class="btn papago full" id="papagoButton" type="button">在 Papago 翻譯</button><p class="translator-note">為了使用 Papago 官方翻譯且不把 API 金鑰公開在網站中，按鈕會將文字安全帶到 Papago 官方頁面。</p></article>
-        <div class="section-title"><h2>常用韓文</h2><small>按 🔊 直接播放</small></div>
+        <div class="section-title"><h2>即時翻譯</h2><small>中文 ⇄ 韓文</small></div>
+        <article class="card translate-card">
+          <div class="translator-controls"><select id="translateDirection"><option value="zh-TW|ko">中文 → 韓文</option><option value="ko|zh-TW">韓文 → 中文</option></select><button class="icon-btn" id="swapLanguage" type="button">⇄</button></div>
+          <textarea id="translateInput" rows="5" maxlength="500" placeholder="輸入要翻譯的句子"></textarea>
+          <div class="translation-actions"><button class="btn primary" id="translateNowButton" type="button">立即翻譯</button><button class="btn papago" id="papagoButton" type="button">用 Papago 翻譯</button></div>
+          <div class="translation-result" id="translationResult" aria-live="polite">翻譯結果會顯示在這裡</div>
+          <div class="translation-tools"><button class="btn white" id="speakTranslation" type="button">🔊 播放</button><button class="btn white" id="copyTranslation" type="button">⧉ 複製</button></div>
+        </article>
+        <div class="section-title phrase-title"><h2>常用韓文</h2><small>依情境快速查找</small></div>
+        <div class="phrase-category-tabs" id="phraseCategoryTabs"></div>
         <article class="card" id="phraseList"></article>
       </div>
     </section>
@@ -139,5 +147,6 @@
 <script src="data.js"></script>
 <script src="overrides.js"></script>
 <script src="app.js"></script>
+<script src="enhancements.js"></script>
 </body>
 </html>
