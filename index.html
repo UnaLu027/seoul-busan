@@ -12,24 +12,226 @@
 </head>
 <body>
 <div class="app">
-<header class="topbar"><div class="brand serif">SEOUL — BUSAN</div><button class="mom-toggle" id="momToggle">👩 媽媽模式</button></header>
+<header class="topbar">
+  <div class="brand serif">SEOUL · BUSAN</div>
+  <button class="mom-toggle" id="momToggle" type="button">👩 媽媽模式</button>
+</header>
+
 <main>
 <section id="home" class="page active">
-<div class="intro"><div class="route">TAIPEI · SEOUL · BUSAN</div><h1>首爾 × 釜山<br>母女旅行</h1><div class="pill-row"><span class="pill">2026.07.30—08.04</span><span class="pill">6 天 5 夜</span><span class="pill">2 位成人</span><span class="pill" id="countdown">旅程倒數</span></div></div>
-<div class="section">
-<div class="section-title"><h2>航班</h2><small>時間與航廈</small></div>
-<div class="card flight-card"><div class="flight-head"><b>去程｜真航空 LJ734</b><span>7/30</span></div><div class="flight-body"><div class="flight-route"><div class="airport"><b>TPE T1</b><span>桃園國際機場 第一航廈</span></div><div class="arrow">→</div><div class="airport"><b>ICN T2</b><span>仁川國際機場 第二航廈</span></div></div><div class="flight-time"><div class="info-box"><span>起飛</span><b>01:25</b></div><div class="info-box"><span>抵達</span><b>05:00</b></div></div><div class="luggage">托運：15 kg × 1 件／人</div></div></div>
-<div class="card flight-card"><div class="flight-head"><b>回程｜中華航空 CI187</b><span>8/4</span></div><div class="flight-body"><div class="flight-route"><div class="airport"><b>PUS T1</b><span>釜山金海國際機場 第一航廈</span></div><div class="arrow">→</div><div class="airport"><b>TPE T1</b><span>桃園國際機場 第一航廈</span></div></div><div class="flight-time"><div class="info-box"><span>起飛</span><b>20:00</b></div><div class="info-box"><span>抵達</span><b>21:20</b></div></div><div class="luggage">托運：23 kg × 2 件／人＋手提行李｜座位 46H</div></div></div>
-<div class="section-title"><h2>旅程資訊</h2><small>已確認內容</small></div><div class="summary-grid"><div class="summary-card"><b>Hotel Botanik</b><span>首爾 7/30—8/1</span></div><div class="summary-card"><b>Hotel 1</b><span>釜山 8/1—8/4</span></div><div class="summary-card"><b>8 項</b><span>已訂票／預約</span></div><div class="summary-card"><b id="homeBudget">NT$50,000</b><span>每人預算，可修改</span></div></div>
-</div></section>
-<section id="itinerary" class="page"><div class="section"><div class="section-title"><h2>每日行程</h2><small>交通與建議出口</small></div></div><div class="days" id="dayChips"></div><div class="section"><div class="card"><div class="timeline" id="timeline"></div></div></div></section>
-<section id="explore" class="page"><div class="section"><div class="section-title"><h2>區域探索</h2><small>截圖標註地點</small></div><div class="district-tabs" id="districtTabs"></div><div class="category-tabs" id="categoryTabs" style="margin:10px 0 12px"></div><div class="place-grid" id="placeGrid"></div></div></section>
-<section id="budget" class="page budget-sensitive"><div class="section"><div class="section-title"><h2>旅行預算</h2><small>依分類查看支出</small></div><div class="card"><div class="budget-head"><div><div class="sub">每人預算</div><input id="budgetLimit" class="budget-input" type="number" min="0"></div><div style="text-align:right"><div class="sub">目前估算／人</div><b id="budgetTotal">—</b></div></div><div class="progress" style="margin-top:13px"><i id="budgetBar"></i></div><div class="category-summary" id="categorySummary"></div></div><div class="card"><div id="expenseList"></div><button class="btn primary" onclick="openExpenseModal()">＋ 新增支出</button></div></div></section>
-<section id="prep" class="page"><div class="section"><div class="section-title"><h2>行前準備</h2><small id="packingProgress">0/0</small></div><div class="card"><div class="packing-tabs" id="packingTabs"></div><div class="progress"><i id="packingBar"></i></div><div id="packingList"></div><button class="btn primary" onclick="openPackingModal()">＋ 新增項目</button></div><div class="card"><h3 class="serif" style="margin-top:0">行李額度</h3><p><b>去程 LJ734：</b>托運 15 kg × 1 件／人</p><p><b>回程 CI187：</b>托運 23 kg × 2 件／人＋手提行李</p></div><div class="section-title"><h2>常用韓文</h2><small>按 🔊 播放</small></div><div class="card" id="phraseList"></div></div></section>
+  <div class="intro">
+    <div class="route">SEOUL · BUSAN</div>
+    <h1>首爾 × 釜山</h1>
+    <p class="subtitle">雖然不能 forever young<br>但可以去 olive young</p>
+    <div class="pill-row">
+      <span class="pill">2026.07.30—08.04</span>
+      <span class="pill">6 天 5 夜</span>
+      <span class="pill">2 位成人</span>
+      <span class="pill" id="countdown">旅程倒數</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><h2>航班資訊</h2><small>時間與航廈</small></div>
+
+    <article class="card flight-card">
+      <div class="flight-head"><b>去程｜真航空 LJ734</b><span>7/30</span></div>
+      <div class="flight-body">
+        <div class="flight-route">
+          <div class="airport"><b>TPE · T1</b><span>桃園國際機場</span></div>
+          <div class="arrow">→</div>
+          <div class="airport right"><b>ICN · T2</b><span>仁川國際機場</span></div>
+        </div>
+        <div class="flight-time">
+          <div class="info-box"><span>起飛</span><b>01:25</b></div>
+          <div class="info-box"><span>抵達</span><b>05:00</b></div>
+        </div>
+        <div class="luggage">托運：15 kg × 1 件／人</div>
+      </div>
+    </article>
+
+    <article class="card flight-card">
+      <div class="flight-head"><b>回程｜中華航空 CI187</b><span>8/4</span></div>
+      <div class="flight-body">
+        <div class="flight-route">
+          <div class="airport"><b>PUS · T1</b><span>金海國際機場</span></div>
+          <div class="arrow">→</div>
+          <div class="airport right"><b>TPE · T1</b><span>桃園國際機場</span></div>
+        </div>
+        <div class="flight-time">
+          <div class="info-box"><span>起飛</span><b>20:00</b></div>
+          <div class="info-box"><span>抵達</span><b>21:20</b></div>
+        </div>
+        <div class="luggage">托運：23 kg × 2 件／人＋手提行李｜座位 46H</div>
+      </div>
+    </article>
+
+    <div class="section-title accommodation-title"><h2>住宿資訊</h2><small>訂房內容</small></div>
+
+    <article class="card hotel-card">
+      <div class="hotel-heading">
+        <div><span class="hotel-city">SEOUL</span><h3>HOTEL BOTANIK 世運明洞</h3></div>
+        <span class="status-pill">已確認</span>
+      </div>
+      <div class="detail-grid">
+        <div><span>入住／退房</span><b>7/30—8/1・2 晚</b></div>
+        <div><span>房型</span><b>高級豪華家庭雙床房</b></div>
+        <div><span>床型／面積</span><b>1 單人床＋1 雙人床・31㎡</b></div>
+        <div><span>早餐</span><b>不含早餐</b></div>
+      </div>
+      <p class="hotel-note">城市景觀、房內洗衣機；鄰近乙支路三街站。前往飯店時優先依站內電梯標示移動。</p>
+      <div class="actions">
+        <a class="btn primary" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%ED%98%B8%ED%85%94%EB%8D%94%EB%B3%B4%ED%83%80%EB%8B%89%EC%84%B8%EC%9A%B4">NAVER</a>
+        <a class="btn white" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=HOTEL+BOTANIK+SEWOON+MYEONGDONG">Google Maps</a>
+      </div>
+    </article>
+
+    <article class="card hotel-card">
+      <div class="hotel-heading">
+        <div><span class="hotel-city">BUSAN</span><h3>Gwangalli Hotel 1</h3></div>
+        <span class="status-pill">已確認</span>
+      </div>
+      <div class="detail-grid">
+        <div><span>入住／退房</span><b>8/1 16:00 後—8/4 11:00 前</b></div>
+        <div><span>房型</span><b>Premium Ocean Front Suite</b></div>
+        <div><span>住宿人數</span><b>2 位成人・1 房 3 晚</b></div>
+        <div><span>早餐</span><b>不含早餐</b></div>
+      </div>
+      <p class="hotel-note">地址：203, Gwanganhaebyeon-ro, Busan 48303。已備註希望安排高樓層；提供 Wi‑Fi、飲用水、咖啡／茶。電話：+82 51-759-1011。</p>
+      <div class="actions">
+        <a class="btn primary" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC%ED%98%B8%ED%85%941">NAVER</a>
+        <a class="btn white" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=203+Gwanganhaebyeon-ro+Busan">Google Maps</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="itinerary" class="page">
+  <div class="section page-head"><div class="section-title"><h2>每日行程</h2><small>交通與建議出口</small></div></div>
+  <div class="days" id="dayChips"></div>
+  <div class="section"><div class="card timeline-card"><div class="timeline" id="timeline"></div></div></div>
+</section>
+
+<section id="explore" class="page">
+  <div class="section page-head">
+    <div class="section-title"><h2>區域探索</h2><small>依區域與類型篩選</small></div>
+    <div class="district-tabs" id="districtTabs"></div>
+    <div class="category-tabs" id="categoryTabs"></div>
+    <div class="place-grid" id="placeGrid"></div>
+  </div>
+</section>
+
+<section id="budget" class="page budget-sensitive">
+  <div class="section page-head">
+    <div class="section-title"><h2>旅行預算</h2><small>依分類查看支出</small></div>
+    <div class="card">
+      <div class="budget-head">
+        <label><span class="sub">每人預算（TWD）</span><input id="budgetLimit" class="budget-input" type="number" min="0" inputmode="numeric"></label>
+        <div class="budget-number"><span class="sub">目前估算／人</span><b id="budgetTotal">—</b></div>
+      </div>
+      <div class="progress"><i id="budgetBar"></i></div>
+      <div class="category-summary" id="categorySummary"></div>
+    </div>
+
+    <div class="card fx-card">
+      <div class="tool-heading"><div><span class="sub">即時匯率</span><h3>KRW ⇄ TWD</h3></div><button class="icon-btn" id="refreshRate" type="button">更新</button></div>
+      <div class="rate-line"><b id="liveRate">讀取中…</b><span id="rateDate"></span></div>
+      <div class="converter">
+        <label><span>金額</span><input id="fxAmount" type="number" min="0" value="10000" inputmode="decimal"></label>
+        <label><span>方向</span><select id="fxDirection"><option value="KRW_TWD">韓元 → 台幣</option><option value="TWD_KRW">台幣 → 韓元</option></select></label>
+      </div>
+      <div class="conversion-result" id="fxResult">—</div>
+      <p class="microcopy">匯率為參考值，信用卡、LINE Pay 與銀行實際入帳可能另含價差或海外交易費。</p>
+    </div>
+
+    <div class="card">
+      <div class="list-heading"><h3>支出明細</h3><button class="btn primary" type="button" onclick="openExpenseModal()">＋ 新增</button></div>
+      <div id="expenseList"></div>
+    </div>
+  </div>
+</section>
+
+<section id="prep" class="page">
+  <div class="section page-head">
+    <div class="section-title"><h2>行前準備</h2><small id="packingProgress">0/0</small></div>
+    <div class="card">
+      <div class="packing-tabs" id="packingTabs"></div>
+      <div class="progress"><i id="packingBar"></i></div>
+      <div id="packingList"></div>
+      <button class="btn primary add-wide" type="button" onclick="openPackingModal()">＋ 新增項目</button>
+    </div>
+
+    <div class="card">
+      <h3 class="serif card-title">行李額度</h3>
+      <div class="allowance-grid">
+        <div><span>去程 LJ734</span><b>15 kg × 1 件／人</b></div>
+        <div><span>回程 CI187</span><b>23 kg × 2 件／人＋手提</b></div>
+      </div>
+    </div>
+
+    <div class="section-title"><h2>即時翻譯</h2><small>中文／韓文</small></div>
+    <div class="card translator-card">
+      <label class="full-label"><span>翻譯方向</span><select id="translationDirection"><option value="zh-TW|ko">中文 → 韓文</option><option value="ko|zh-TW">韓文 → 中文</option></select></label>
+      <label class="full-label"><span>輸入內容</span><textarea id="translationInput" rows="4" placeholder="輸入要翻譯的句子"></textarea></label>
+      <button class="btn primary add-wide" id="translateBtn" type="button">翻譯</button>
+      <div class="translation-output" id="translationOutput">翻譯結果會顯示在這裡。</div>
+      <div class="actions">
+        <button class="btn soft" id="speakTranslation" type="button">🔊 播放結果</button>
+        <button class="btn white" id="copyTranslation" type="button">複製</button>
+      </div>
+    </div>
+
+    <div class="section-title"><h2>常用韓文</h2><small>按 🔊 播放</small></div>
+    <div class="card" id="phraseList"></div>
+  </div>
+</section>
 </main>
-<nav class="bottom-nav"><button class="nav-btn active" data-page="home"><b>⌂</b>首頁</button><button class="nav-btn" data-page="itinerary"><b>◷</b>行程</button><button class="nav-btn" data-page="explore"><b>⌖</b>探索</button><button class="nav-btn" data-page="budget"><b>₩</b>預算</button><button class="nav-btn" data-page="prep"><b>✓</b>行前</button></nav>
+
+<nav class="bottom-nav" aria-label="主要導覽">
+  <button class="nav-btn active" data-page="home" type="button"><b>⌂</b><span>首頁</span></button>
+  <button class="nav-btn" data-page="itinerary" type="button"><b>◷</b><span>行程</span></button>
+  <button class="nav-btn" data-page="explore" type="button"><b>⌖</b><span>探索</span></button>
+  <button class="nav-btn" data-page="budget" type="button"><b>₩</b><span>預算</span></button>
+  <button class="nav-btn" data-page="prep" type="button"><b>✓</b><span>行前</span></button>
+</nav>
 </div>
-<div class="modal" id="expenseModal"><div class="sheet"><div class="sheet-head"><h3 id="expenseModalTitle">新增支出</h3><button class="icon-btn" onclick="closeModal('expenseModal')">✕</button></div><form class="form" id="expenseForm"><input type="hidden" id="expenseId"><input id="expenseName" placeholder="項目名稱" required><div class="form-grid"><input id="expenseAmount" type="number" min="0" step="0.01" placeholder="金額" required><select id="expenseCurrency"><option>TWD</option><option>KRW</option></select></div><div class="form-grid"><select id="expenseCategory"><option>機票</option><option>住宿</option><option>交通</option><option>票券</option><option>網路</option><option>美容</option><option>餐飲</option><option>購物</option><option>其他</option></select><select id="expenseStatus"><option>已付款</option><option>待付款</option></select></div><button class="btn primary" type="submit">儲存</button></form></div></div>
-<div class="modal" id="packingModal"><div class="sheet"><div class="sheet-head"><h3 id="packingModalTitle">新增行李項目</h3><button class="icon-btn" onclick="closeModal('packingModal')">✕</button></div><form class="form" id="packingForm"><input type="hidden" id="packingId"><input id="packingName" placeholder="物品名稱" required><div class="form-grid"><select id="packingTypeInput"><option>隨身物品</option><option>托運行李</option></select><input id="packingCategory" placeholder="細項分類，例如：證件"></div><button class="btn primary" type="submit">儲存</button></form></div></div>
-<script src="data.js"></script><script src="app.js"></script>
-</body></html>
+
+<div class="modal" id="expenseModal">
+  <div class="sheet">
+    <div class="sheet-head"><h3 id="expenseModalTitle">新增支出</h3><button class="icon-btn" type="button" onclick="closeModal('expenseModal')">✕</button></div>
+    <form class="form" id="expenseForm">
+      <input type="hidden" id="expenseId">
+      <label><span>項目名稱</span><input id="expenseName" required></label>
+      <div class="form-grid">
+        <label><span>金額</span><input id="expenseAmount" type="number" min="0" step="0.01" required></label>
+        <label><span>幣別</span><select id="expenseCurrency"><option>TWD</option><option>KRW</option></select></label>
+      </div>
+      <div class="form-grid">
+        <label><span>分類</span><select id="expenseCategory"><option>機票</option><option>住宿</option><option>交通</option><option>票券</option><option>網路</option><option>美容</option><option>餐飲</option><option>購物</option><option>其他</option></select></label>
+        <label><span>狀態</span><select id="expenseStatus"><option>已付款</option><option>待付款</option></select></label>
+      </div>
+      <label><span>計價方式</span><select id="expenseScope"><option value="total">兩人總價</option><option value="person">每人價格</option></select></label>
+      <button class="btn primary add-wide" type="submit">儲存</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="packingModal">
+  <div class="sheet">
+    <div class="sheet-head"><h3 id="packingModalTitle">新增行李項目</h3><button class="icon-btn" type="button" onclick="closeModal('packingModal')">✕</button></div>
+    <form class="form" id="packingForm">
+      <input type="hidden" id="packingId">
+      <label><span>物品名稱</span><input id="packingName" required></label>
+      <div class="form-grid">
+        <label><span>行李類型</span><select id="packingTypeInput"><option>隨身物品</option><option>托運行李</option></select></label>
+        <label><span>細項分類</span><input id="packingCategory" placeholder="例如：證件"></label>
+      </div>
+      <button class="btn primary add-wide" type="submit">儲存</button>
+    </form>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
