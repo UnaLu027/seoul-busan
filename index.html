@@ -8,228 +8,28 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#102a43;--blue:#dcecf6;--pale:#f4f8fb;--line:#d9e4ec;--white:#fff;--ink:#17324d;--muted:#6b7f91;--green:#14804a;--gold:#9a6a16;--danger:#a73d3d;--shadow:0 14px 35px rgba(16,42,67,.09)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--pale);color:var(--ink);font-family:"Noto Sans TC",sans-serif;padding-bottom:88px}
-button,input,select{font:inherit}.serif{font-family:"Noto Serif TC",serif}.app{max-width:760px;margin:auto}.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:rgba(244,248,251,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(217,228,236,.8)}
-.brand{font-weight:700;letter-spacing:.06em}.mom-toggle{border:1px solid var(--line);background:#fff;border-radius:99px;padding:8px 12px;color:var(--navy);font-weight:700}
-.hero{margin:14px 14px 18px;border-radius:26px;min-height:310px;overflow:hidden;position:relative;background:#17324d center/cover no-repeat;box-shadow:var(--shadow)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,22,38,.05),rgba(4,22,38,.75))}
-.hero-content{position:absolute;z-index:2;left:22px;right:22px;bottom:22px;color:#fff}.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
-.hero h1{font-size:2.35rem;line-height:1.08;margin:8px 0}.hero-meta{display:flex;gap:9px;flex-wrap:wrap}.glass{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:7px 10px;border-radius:99px;font-size:.8rem;backdrop-filter:blur(8px)}
-.section{padding:0 14px 18px}.section-title{display:flex;justify-content:space-between;align-items:end;margin:4px 3px 12px}.section-title h2{font-family:"Noto Serif TC";margin:0;font-size:1.35rem}.section-title small{color:var(--muted)}
-.card{background:#fff;border:1px solid #e7eef3;border-radius:20px;padding:17px;box-shadow:0 8px 24px rgba(16,42,67,.055);margin-bottom:12px}.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.summary-card{background:#fff;border:1px solid #e5edf2;border-radius:18px;padding:15px}.summary-card b{display:block;font-size:1.32rem;color:var(--navy)}.summary-card span{font-size:.78rem;color:var(--muted)}
-.days{display:flex;overflow:auto;gap:8px;padding:0 14px 12px;scrollbar-width:none}.day-chip{white-space:nowrap;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:99px;padding:9px 13px}.day-chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-.timeline{position:relative;padding-left:20px}.timeline::before{content:"";position:absolute;left:5px;top:7px;bottom:10px;width:1px;background:var(--line)}.event{position:relative;padding:0 0 18px 16px}.event::before{content:"";position:absolute;left:-20px;top:7px;width:10px;height:10px;background:#fff;border:3px solid #6b9ec1;border-radius:50%}.time{font-weight:700;color:#557a95;font-size:.82rem}.event h3{font-family:"Noto Serif TC";margin:3px 0 5px;font-size:1.05rem}.meta{color:var(--muted);font-size:.83rem;line-height:1.6}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.tag{font-size:.72rem;padding:5px 8px;border-radius:99px;background:var(--blue);color:var(--navy)}.tag.booked{background:#e8f4ed;color:var(--green)}.tag.pass{background:#fff4d9;color:var(--gold)}
-.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.btn{border:0;border-radius:12px;padding:9px 11px;font-weight:700;font-size:.78rem;text-decoration:none;display:inline-flex;align-items:center;gap:5px;cursor:pointer}.btn.primary{background:var(--navy);color:#fff}.btn.soft{background:var(--blue);color:var(--navy)}.btn.white{background:#fff;color:var(--navy);border:1px solid var(--line)}
-.transport{margin-top:10px;padding:10px 12px;background:#f5f9fc;border-left:3px solid #7ca6c2;border-radius:10px;font-size:.8rem;line-height:1.55}.guide{display:none;margin-top:10px;border-top:1px solid var(--line);padding-top:12px}.guide.open{display:block}.guide-photo{width:100%;height:175px;object-fit:cover;border-radius:14px;background:#dcecf6}.guide p{font-size:.86rem;line-height:1.7;margin:10px 0;color:#486276}
-.page{display:none}.page.active{display:block}.district-tabs{display:flex;gap:8px;overflow:auto;margin-bottom:12px}.district-tabs button{border:1px solid var(--line);background:#fff;border-radius:99px;padding:8px 12px;white-space:nowrap}.place-grid{display:grid;gap:10px}.place-card{background:#fff;border:1px solid #e5edf2;border-radius:17px;padding:14px}.place-card h3{margin:0 0 5px;font-family:"Noto Serif TC"}.place-card p{margin:0;color:var(--muted);font-size:.82rem;line-height:1.55}
-.progress{height:10px;background:#e6eef3;border-radius:99px;overflow:hidden}.progress>i{height:100%;display:block;background:var(--navy);border-radius:99px}.expense-row,.check-row,.phrase-row{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #edf2f5}.expense-row:last-child,.check-row:last-child,.phrase-row:last-child{border-bottom:0}.grow{flex:1}.sub{font-size:.76rem;color:var(--muted)}.icon-btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:7px 9px}.danger{color:var(--danger)}.check-row.done .grow{text-decoration:line-through;color:#8b9baa}.check-row input{width:20px;height:20px}.form{display:grid;gap:9px}.form input,.form select{width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;background:#fff}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.phrase-korean{font-size:1.1rem;font-weight:700}.category-title{margin:18px 0 8px;font-family:"Noto Serif TC";color:var(--navy)}
-.bottom-nav{position:fixed;z-index:40;left:50%;transform:translateX(-50%);bottom:0;width:min(760px,100%);height:76px;padding:9px 8px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr)}
-.nav-btn{border:0;background:transparent;color:#8294a3;font-size:.68rem}.nav-btn b{display:block;font-size:1.15rem;margin-bottom:3px}.nav-btn.active{color:var(--navy);font-weight:700}
-.modal{position:fixed;inset:0;z-index:80;background:rgba(4,22,38,.45);display:none;align-items:end;justify-content:center}.modal.open{display:flex}.sheet{width:min(760px,100%);max-height:88vh;overflow:auto;background:var(--pale);border-radius:24px 24px 0 0;padding:18px 16px calc(25px + env(safe-area-inset-bottom))}
-.sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.sheet h3{font-family:"Noto Serif TC";margin:0}.muted{color:var(--muted)}.hidden{display:none!important}
-body.mom{font-size:1.13rem}body.mom .budget-sensitive,body.mom .advanced{display:none!important}body.mom .hero{min-height:360px}body.mom .event h3{font-size:1.22rem}body.mom .meta{font-size:.95rem}
-@media(min-width:680px){.place-grid{grid-template-columns:1fr 1fr}.hero{min-height:360px}.summary-grid{grid-template-columns:repeat(4,1fr)}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="app">
 <header class="topbar"><div class="brand serif">SEOUL — BUSAN</div><button class="mom-toggle" id="momToggle">👩 媽媽模式</button></header>
 <main>
 <section id="home" class="page active">
-<div class="hero" id="hero"><div class="hero-content"><div class="eyebrow" id="heroCity">SEOUL</div><h1 class="serif">首爾 × 釜山<br>母女旅行</h1><div class="hero-meta"><span class="glass">2026.07.30—08.04</span><span class="glass">6天5夜・2人</span><span class="glass" id="countdown">旅程倒數</span></div></div></div>
+<div class="intro"><div class="route">TAIPEI · SEOUL · BUSAN</div><h1>首爾 × 釜山<br>母女旅行</h1><div class="pill-row"><span class="pill">2026.07.30—08.04</span><span class="pill">6 天 5 夜</span><span class="pill">2 位成人</span><span class="pill" id="countdown">旅程倒數</span></div></div>
 <div class="section">
-<div class="section-title"><h2>旅程總覽</h2><small>平衡交通模式 B</small></div>
-<div class="summary-grid">
-<div class="summary-card"><b>NT$50,000</b><span>每人總預算</span></div>
-<div class="summary-card"><b id="paidSummary">—</b><span>目前已知支出／人</span></div>
-<div class="summary-card"><b>8 項</b><span>已預訂／購買</span></div>
-<div class="summary-card"><b>15kg</b><span>去程托運／人</span></div>
-</div></div>
-<div class="section"><div class="section-title"><h2>下一個重要行程</h2><small>一眼看懂</small></div>
-<div class="card"><div class="time">7/30 01:25</div><h3 class="serif">真航空 LJ734｜桃園 → 仁川</h3><div class="meta">桃園 T1 出發，05:00 抵達仁川 T2。去程托運 15 kg × 1 件／人。</div><div class="actions"><button class="btn primary" onclick="showPage('itinerary')">查看完整行程</button><button class="btn soft" onclick="showPage('prep')">行前確認</button></div></div>
-</div>
-</section>
-
-<section id="itinerary" class="page">
-<div class="section" style="padding-top:14px"><div class="section-title"><h2>每日行程</h2><small>點 Guide 看介紹</small></div></div>
-<div class="days" id="dayChips"></div>
-<div class="section"><div class="card"><div class="timeline" id="timeline"></div></div></div>
-</section>
-
-<section id="explore" class="page">
-<div class="section" style="padding-top:14px"><div class="section-title"><h2>區域探索</h2><small>NAVER 收藏整理</small></div>
-<div class="district-tabs" id="districtTabs"></div><div class="place-grid" id="placeGrid"></div></div>
-</section>
-
-<section id="budget" class="page budget-sensitive">
-<div class="section" style="padding-top:14px"><div class="section-title"><h2>旅行預算</h2><small>可新增・修改・刪除</small></div>
-<div class="card"><div style="display:flex;justify-content:space-between;align-items:end"><div><div class="sub">每人預算</div><div class="serif" style="font-size:1.8rem;font-weight:700">NT$50,000</div></div><div style="text-align:right"><div class="sub">目前估算／人</div><b id="budgetTotal">—</b></div></div><div class="progress" style="margin-top:14px"><i id="budgetBar" style="width:0"></i></div></div>
-<div class="card"><div id="expenseList"></div><button class="btn primary" onclick="openExpenseModal()">＋ 新增支出</button></div></div>
-</section>
-
-<section id="prep" class="page">
-<div class="section" style="padding-top:14px">
-<div class="section-title"><h2>行前準備</h2><small id="packingProgress">0/0</small></div>
-<div class="card"><div class="progress"><i id="packingBar"></i></div><div id="packingList"></div><button class="btn primary" onclick="openPackingModal()">＋ 新增項目</button></div>
-<div class="section-title"><h2>常用韓文</h2><small>按 🔊 直接播放</small></div>
-<div class="card" id="phraseList"></div>
-<div class="card advanced"><h3 class="serif" style="margin-top:0">行李額度</h3><p><b>去程 LJ734：</b>托運 15 kg × 1 件／人</p><p><b>回程 CI187：</b>托運 23 kg × 2 件／人＋手提行李</p></div>
-</div>
-</section>
+<div class="section-title"><h2>航班</h2><small>時間與航廈</small></div>
+<div class="card flight-card"><div class="flight-head"><b>去程｜真航空 LJ734</b><span>7/30</span></div><div class="flight-body"><div class="flight-route"><div class="airport"><b>TPE T1</b><span>桃園國際機場 第一航廈</span></div><div class="arrow">→</div><div class="airport"><b>ICN T2</b><span>仁川國際機場 第二航廈</span></div></div><div class="flight-time"><div class="info-box"><span>起飛</span><b>01:25</b></div><div class="info-box"><span>抵達</span><b>05:00</b></div></div><div class="luggage">托運：15 kg × 1 件／人</div></div></div>
+<div class="card flight-card"><div class="flight-head"><b>回程｜中華航空 CI187</b><span>8/4</span></div><div class="flight-body"><div class="flight-route"><div class="airport"><b>PUS T1</b><span>釜山金海國際機場 第一航廈</span></div><div class="arrow">→</div><div class="airport"><b>TPE T1</b><span>桃園國際機場 第一航廈</span></div></div><div class="flight-time"><div class="info-box"><span>起飛</span><b>20:00</b></div><div class="info-box"><span>抵達</span><b>21:20</b></div></div><div class="luggage">托運：23 kg × 2 件／人＋手提行李｜座位 46H</div></div></div>
+<div class="section-title"><h2>旅程資訊</h2><small>已確認內容</small></div><div class="summary-grid"><div class="summary-card"><b>Hotel Botanik</b><span>首爾 7/30—8/1</span></div><div class="summary-card"><b>Hotel 1</b><span>釜山 8/1—8/4</span></div><div class="summary-card"><b>8 項</b><span>已訂票／預約</span></div><div class="summary-card"><b id="homeBudget">NT$50,000</b><span>每人預算，可修改</span></div></div>
+</div></section>
+<section id="itinerary" class="page"><div class="section"><div class="section-title"><h2>每日行程</h2><small>交通與建議出口</small></div></div><div class="days" id="dayChips"></div><div class="section"><div class="card"><div class="timeline" id="timeline"></div></div></div></section>
+<section id="explore" class="page"><div class="section"><div class="section-title"><h2>區域探索</h2><small>截圖標註地點</small></div><div class="district-tabs" id="districtTabs"></div><div class="category-tabs" id="categoryTabs" style="margin:10px 0 12px"></div><div class="place-grid" id="placeGrid"></div></div></section>
+<section id="budget" class="page budget-sensitive"><div class="section"><div class="section-title"><h2>旅行預算</h2><small>依分類查看支出</small></div><div class="card"><div class="budget-head"><div><div class="sub">每人預算</div><input id="budgetLimit" class="budget-input" type="number" min="0"></div><div style="text-align:right"><div class="sub">目前估算／人</div><b id="budgetTotal">—</b></div></div><div class="progress" style="margin-top:13px"><i id="budgetBar"></i></div><div class="category-summary" id="categorySummary"></div></div><div class="card"><div id="expenseList"></div><button class="btn primary" onclick="openExpenseModal()">＋ 新增支出</button></div></div></section>
+<section id="prep" class="page"><div class="section"><div class="section-title"><h2>行前準備</h2><small id="packingProgress">0/0</small></div><div class="card"><div class="packing-tabs" id="packingTabs"></div><div class="progress"><i id="packingBar"></i></div><div id="packingList"></div><button class="btn primary" onclick="openPackingModal()">＋ 新增項目</button></div><div class="card"><h3 class="serif" style="margin-top:0">行李額度</h3><p><b>去程 LJ734：</b>托運 15 kg × 1 件／人</p><p><b>回程 CI187：</b>托運 23 kg × 2 件／人＋手提行李</p></div><div class="section-title"><h2>常用韓文</h2><small>按 🔊 播放</small></div><div class="card" id="phraseList"></div></div></section>
 </main>
-
-<nav class="bottom-nav">
-<button class="nav-btn active" data-page="home"><b>⌂</b>首頁</button>
-<button class="nav-btn" data-page="itinerary"><b>◷</b>行程</button>
-<button class="nav-btn" data-page="explore"><b>⌖</b>探索</button>
-<button class="nav-btn budget-sensitive" data-page="budget"><b>₩</b>預算</button>
-<button class="nav-btn" data-page="prep"><b>✓</b>行前</button>
-</nav>
+<nav class="bottom-nav"><button class="nav-btn active" data-page="home"><b>⌂</b>首頁</button><button class="nav-btn" data-page="itinerary"><b>◷</b>行程</button><button class="nav-btn" data-page="explore"><b>⌖</b>探索</button><button class="nav-btn" data-page="budget"><b>₩</b>預算</button><button class="nav-btn" data-page="prep"><b>✓</b>行前</button></nav>
 </div>
-
-<div class="modal" id="expenseModal"><div class="sheet"><div class="sheet-head"><h3 id="expenseModalTitle">新增支出</h3><button class="icon-btn" onclick="closeModal('expenseModal')">✕</button></div><div class="form">
-<input id="expenseName" placeholder="項目名稱"><div class="form-grid"><input id="expenseAmount" type="number" placeholder="金額"><select id="expenseCurrency"><option>TWD</option><option>KRW</option></select></div>
-<div class="form-grid"><select id="expenseScope"><option value="total">兩人總價</option><option value="person">每人價格</option></select><select id="expenseStatus"><option>已付款</option><option>待付款</option><option>現場預算</option></select></div>
-<select id="expenseCategory"><option>機票</option><option>住宿</option><option>票券</option><option>交通</option><option>餐飲</option><option>購物</option><option>美容</option><option>其他</option></select>
-<button class="btn primary" onclick="saveExpense()">儲存</button></div></div></div>
-
-<div class="modal" id="packingModal"><div class="sheet"><div class="sheet-head"><h3 id="packingModalTitle">新增行李項目</h3><button class="icon-btn" onclick="closeModal('packingModal')">✕</button></div><div class="form">
-<input id="packingName" placeholder="項目名稱"><select id="packingCategory"><option>證件與金錢</option><option>電子用品</option><option>衣物</option><option>盥洗保養</option><option>藥品</option><option>票券與韓國用品</option><option>其他</option></select>
-<button class="btn primary" onclick="savePacking()">儲存</button></div></div></div>
-
-<script>
-const KRW_RATE=.0235;
-const days=[
-{date:"7/30",title:"首爾初抵達",items:[
-["05:00","抵達仁川機場 T2","入境、領行李後搭 AREX 前往市區。","交通","AREX 至弘大轉乘地鐵前往乙支路三街，約 70–90 分鐘。"],
-["07:00","Hotel Botanik Sewoon 寄放行李","先寄放行李，下午再正式辦理入住。","住宿","乙支路三街站優先找有電梯出口。"],
-["08:00–09:30","Artist Bakery & Onion","安國早餐與韓屋街散步。","guide","地鐵前往安國，步行串聯兩間店。"],
-["09:30–11:00","樂天免稅店","乙支路入口站購物。","購物","安國 → 乙支路入口，以地鐵為主。"],
-["11:00–14:00","avahair 剪髮","兩人已預約，預留約 3 小時。","booked","步行或短程地鐵前往明洞。"],
-["14:00–19:00","明洞逛街 Guide","美妝、服飾、大創與收藏店家自由調整。","guide","區域內以步行為主。"],
-["19:00–20:00","鐘路布帳馬車／DK 韓食","依現場排隊狀況二選一。","餐飲","明洞 → 鐘路三街／乙支路四街。"],
-["20:30–21:30","盤浦大橋彩虹瀑布","夜間戶外重點景點。","guide","從飯店搭計程車較省轉乘。"],
-["22:00–24:00","樂天超市首爾站","採買伴手禮與零食。","購物","盤浦大橋 → 首爾站建議計程車。"]]},
-{date:"7/31",title:"安國 × 弘大",items:[
-["07:00–08:00","London Bagel Museum","熱門貝果早餐，早到降低排隊風險。","guide","地鐵至安國後步行。"],
-["08:00–08:30","NEWMIX","咖啡與伴手禮採買。","購物","安國區步行。"],
-["08:30–10:30","回飯店休息","補眠與整理戰利品。","住宿","搭地鐵返回乙支路三街。"],
-["11:00–14:00","安國逛街＋豆漿麵","韓屋巷弄、選物店、無垢屋。","guide","區內以步行為主。"],
-["14:30–18:00","弘大逛街 Guide","依服飾、美妝、偶像同款分類彈性逛。","guide","安國 → 弘大入口，地鐵約 30 分鐘。"],
-["18:00–19:30","lala&kay","DK 同款韓餐。","餐飲","從弘大商圈步行前往。"],
-["19:30–22:00","Touch Five","19:30 報到，20:00 開演；KKday 已購票。","booked","步行前往，避免壓線。"]]},
-{date:"8/1",title:"首爾 → 釜山",items:[
-["09:00","退房並寄放行李","最晚 12:00 退房。","住宿","先完成退房再前往市廳。"],
-["09:00–10:30","德壽宮","韓式宮殿與西式石造殿並存。","guide","地鐵至市廳站。"],
-["10:30–13:00","Kitty 咖啡廳＋明洞大創","室內休息與最後採買。","購物","市廳／乙支路入口／明洞步行串聯。"],
-["13:00–14:00","兔子停咖哩烏龍麵","前往首爾站前用餐。","餐飲","用餐後取行李並前往首爾站。"],
-["14:42–17:23","KTX 首爾 → 釜山","車票已訂，提早 20–30 分鐘進站。","booked","KTX 直達釜山站。"],
-["17:23–18:00","計程車前往 Hotel 1","攜帶行李直接叫車。","交通","釜山站 → 廣安里約 25–35 分鐘。"],
-["18:00–18:45","Gwangan 第一小吃炸雞","簡單晚餐。","餐飲","飯店附近步行。"],
-["19:00–20:30","Yacht Holic 遊艇","19:00 集合、19:30 出航；已預訂付款。","booked","步行至集合處。"],
-["20:30–23:30","Salmon Brother＋Aqua Palace","晚餐後使用釜山 Pass 夜景汗蒸幕。","pass","廣安里區內步行或短程計程車。"]]},
-{date:"8/2",title:"釜山西線 × 海雲台",items:[
-["08:30–09:30","CASA BUSANO 廣安店","圓佑同款咖啡廳。","餐飲","飯店附近步行。"],
-["10:00–14:00","甘川洞文化村","韓服、手翻書與小王子拍照點。","guide pass","廣安里 → 甘川洞建議計程車。"],
-["14:00–16:00","松島纜車＋龍宮雲橋","海景纜車與步道，釜山 Pass。","guide pass","甘川洞 → 松島計程車約 15–20 分鐘。"],
-["16:00–18:30","白淺灘＋Arte Museum","戶外海岸村與室內數位藝術。","guide pass","跨區建議計程車。"],
-["19:00–20:30","X the Sky","海雲台高空觀景與星巴克。","guide pass","影島 → 海雲台車程較長，直接計程車。"],
-["20:30–23:00","Spa Land","汗蒸幕，可視時間安排搓澡。","pass","X the Sky → 新世界百貨計程車或地鐵。"]]},
-{date:"8/3",title:"海岸列車 × 機張",items:[
-["08:30–09:00","膠囊列車 尾浦 → 青沙浦","已預訂，請提早報到。","booked guide","從廣安里前往尾浦建議計程車。"],
-["09:00–11:30","青沙浦咖啡散步","diart、liberta、broni 彈性選擇。","guide","區內步行。"],
-["11:30–12:00","海岸列車 青沙浦 → 松亭","釜山 Pass。","pass","依預約／班次提早排隊。"],
-["12:00–16:00","斜坡滑車＋Brick Campus＋海東龍宮寺","機張重點行程。","guide pass","松亭轉計程車至機張約 8–15 分鐘。"],
-["16:00–17:00","松亭海邊＋海岸列車","回到尾浦。","pass","依海岸列車時刻。"],
-["17:00–21:00","尾浦家＋Club D Oasis","生醃海鮮、鹽麵包與海景汗蒸幕。","pass","尾浦／海雲台區步行。"]]},
-{date:"8/4",title:"東萊 × 西面 × 南浦",items:[
-["08:00–08:30","退房出發","攜帶行李先前往較遠的東萊。","住宿","Hotel 1 → 溫泉洞建議計程車。"],
-["08:30–10:30","周浩鎮的家","釜山東萊區溫泉洞 1214-6。","guide","Naver：https://naver.me/GGGeo3tZ"],
-["10:30–13:30","西面／田浦＋釜田市場","購物、午餐與咖啡，行李寄放需現場確認。","guide","東萊 → 西面建議計程車或地鐵。"],
-["14:00–17:30","dday 醫美","尚未預約；保留報到、諮詢、療程與術後緩衝。","guide","西面 → 南浦洞，地鐵或計程車。"],
-["17:30–18:20","前往金海機場","最晚預留約 40–50 分鐘車程。","交通","南浦洞 → 金海機場建議計程車。"],
-["20:00–21:20","華航 CI187 回台灣","金海 T1 → 桃園 T1；23 kg × 2 件／人＋手提。","booked","提早完成退稅與托運。"]]}
-];
-
-const guides={
-"Artist Bakery & Onion":["安國人氣麵包與韓屋咖啡組合，適合用早餐開啟首爾行程。","建議停留 60–90 分鐘；兩間都可能排隊。","https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80"],
-"明洞逛街 Guide":["明洞是美妝、服飾、免稅與大型店舖密集區，可依現場體力自由刪減。","設定固定集合點與晚餐時間，比硬排每一家店更實用。",""],
-"盤浦大橋彩虹瀑布":["漢江夜間水舞景觀，適合看燈光與河岸夜景。","戶外活動受天候與運行時段影響，當天再確認。","https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?auto=format&fit=crop&w=1200&q=80"],
-"London Bagel Museum":["安國熱門貝果店，以復古空間與多種口味聞名。","早上前往較有機會縮短等待時間。","https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80"],
-"安國逛街＋豆漿麵":["安國結合韓屋巷弄、香氛選物與特色餐飲，適合慢慢散步。","區域多石板路，建議穿好走的鞋。",""],
-"弘大逛街 Guide":["弘大店家密集，主打年輕服飾、美妝、潮流與偶像相關景點。","先逛高優先店家，再往 Touch Five 方向收尾。",""],
-"德壽宮":["首爾五大宮之一，可看到傳統宮殿與西式石造建築並存。","建議停留 60–90 分鐘。","https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=80"],
-"甘川洞文化村":["依山而建的彩色聚落與藝術村，本次重點是韓服、手翻書與小王子拍照。","坡道與階梯較多，安排兩段休息。","https://images.unsplash.com/photo-1601622256416-d7f757f99eb2?auto=format&fit=crop&w=1200&q=80"],
-"松島纜車＋龍宮雲橋":["搭乘海上纜車俯瞰松島海岸，再前往龍宮雲橋散步。","留意纜車排隊與末班時間。","https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"],
-"白淺灘＋Arte Museum":["白淺灘是海岸聚落；Arte Museum 則是室內沉浸式數位藝術館。","戶外與室內搭配，天氣不好可縮短白淺灘。","https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=80"],
-"X the Sky":["位於海雲台高樓的觀景台，可看海岸線與城市夜景。","傍晚到夜間最有層次，建議停留 60–90 分鐘。","https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"],
-"膠囊列車 尾浦 → 青沙浦":["沿海高架行駛的小型彩色列車，是海雲台代表體驗。","需依預約時間提早報到，車廂空間有限。","https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80"],
-"斜坡滑車＋Brick Campus＋海東龍宮寺":["結合遊樂體驗、積木展館與臨海寺廟的一段機張行程。","三個點之間以計程車銜接最有效率。","https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80"],
-"周浩鎮的家":["位於東萊區溫泉洞，距離廣安里較遠，所以安排退房後第一站。","完成後再往西面、田浦與南浦移動，避免折返。",""],
-"西面／田浦＋釜田市場":["西面適合購物，田浦以咖啡與選物店為主，釜田市場可體驗在地市場。","需先確認行李寄放地點。",""],
-"dday 醫美":["南浦洞醫美診所，目前尚未預約。","建議至少保留 3–3.5 小時，包含諮詢、等候、療程與術後處理。",""]
-};
-
-const places={
-"安國":[["Artist Bakery","麵包／早餐","早晨第一站"],["Onion 安國","韓屋咖啡","若排隊過久可彈性調整"],["London Bagel Museum","貝果","7/31 早上固定"],["NEWMIX","咖啡伴手禮","London Bagel 後順路"],["無垢屋","選物","安國散步候補"]],
-"明洞":[["樂天免稅店","免稅購物","7/30 上午"],["avahair","髮廊","7/30 11:00 已預約"],["明洞大創","生活雜貨","8/1 中午"],["Kitty 咖啡廳","主題咖啡","8/1 上午"],["明洞逛街收藏","服飾／美妝","現場依距離與喜好挑選"]],
-"弘大":[["lala&kay","DK 同款韓餐","Touch Five 前晚餐"],["Touch Five","表演","已購票"],["MUSINSA","潮流服飾","逛街候選"],["Common Unique","女裝","逛街候選"],["Cream Market","女裝","逛街候選"],["弘大美妝收藏","美妝","依現場位置就近逛"]],
-"廣安里":[["Hotel 1","住宿","正面海景套房"],["Yacht Holic","遊艇","已預訂"],["Aqua Palace","汗蒸幕","釜山 Pass"],["CASA BUSANO","咖啡","圓佑同款"],["Salmon Brother","餐廳","遊艇後晚餐"]],
-"海雲台":[["X the Sky","觀景台","釜山 Pass"],["Spa Land","汗蒸幕","釜山 Pass"],["尾浦家","生醃海鮮","釜山 Pass 9 折"],["Club D Oasis","海景汗蒸幕","釜山 Pass"],["尾浦膠囊列車","交通體驗","已預訂"]],
-"西面／南浦":[["西面地下街","購物","8/4 彈性"],["田浦咖啡街","咖啡／選物","8/4 彈性"],["釜田市場","市場","8/4 彈性"],["dday 醫美","醫美","尚未預約"]]
-};
-
-let expenses=JSON.parse(localStorage.getItem("tripExpenses")||"null")||[
-{id:1,name:"真航空 LJ734",amount:8830,currency:"TWD",scope:"total",status:"已付款",category:"機票"},
-{id:2,name:"華航 CI187",amount:823600,currency:"KRW",scope:"total",status:"已付款",category:"機票"},
-{id:3,name:"Hotel Botanik",amount:8448,currency:"TWD",scope:"total",status:"已付款",category:"住宿"},
-{id:4,name:"Gwangalli Hotel 1",amount:913572,currency:"KRW",scope:"total",status:"待付款",category:"住宿"},
-{id:5,name:"Touch Five",amount:1893,currency:"TWD",scope:"person",status:"已付款",category:"票券"},
-{id:6,name:"Yacht Holic",amount:62400,currency:"KRW",scope:"total",status:"已付款",category:"票券"},
-{id:7,name:"膠囊列車",amount:1051,currency:"TWD",scope:"total",status:"已付款",category:"票券"},
-{id:8,name:"eSIM",amount:227,currency:"TWD",scope:"person",status:"已付款",category:"交通"}
-];
-let packing=JSON.parse(localStorage.getItem("tripPacking")||"null")||[
-["護照（確認效期）","證件與金錢"],["信用卡與少量韓元","證件與金錢"],["旅遊保險資料","證件與金錢"],["手機與充電線","電子用品"],["行動電源（需隨身）","電子用品"],["韓規雙圓孔轉接頭","電子用品"],["eSIM QR Code／安裝資料","電子用品"],["睡衣、內衣褲、襪子","衣物"],["好走的鞋","衣物"],["薄外套／防曬外套","衣物"],["卸妝與洗面用品","盥洗保養"],["防曬與化妝品","盥洗保養"],["牙刷牙膏","盥洗保養"],["腸胃藥、止痛藥","藥品"],["暈車藥與 OK 繃","藥品"],["T-money","票券與韓國用品"],["釜山 Pass 憑證","票券與韓國用品"],["KTX 車票","票券與韓國用品"],["膠囊列車憑證","票券與韓國用品"],["Touch Five QR Code","票券與韓國用品"],["Yacht Holic 付款截圖","票券與韓國用品"],["飯店訂單截圖","票券與韓國用品"]
-].map((x,i)=>({id:i+1,name:x[0],category:x[1],done:false}));
-const phrases={
-"餐廳":[["파 빼 주세요","請不要加蔥"],["덜 맵게 해 주세요","請做得不那麼辣"],["물 좀 주세요","請給我們水"],["계산해 주세요","請幫我們結帳"],["두 명이에요","我們兩位"]],
-"購物":[["이거 입어 봐도 돼요?","這個可以試穿嗎？"],["다른 색깔 있어요?","有其他顏色嗎？"],["택스 리펀드 돼요?","可以退稅嗎？"],["카드로 할게요","我要刷卡"]],
-"計程車":[["여기로 가 주세요","請載我們到這裡"],["트렁크 열어 주세요","請幫我們開後車廂"],["여기서 내려 주세요","請在這裡讓我們下車"],["카드 결제 돼요?","可以刷卡嗎？"]],
-"飯店":[["예약했어요","我們有預訂"],["짐을 맡길 수 있을까요?","可以寄放行李嗎？"],["체크인하고 싶어요","我們要辦理入住"],["택시를 불러 주세요","請幫我們叫計程車"]],
-"髮廊／醫美":[["예약했어요","我有預約"],["사진처럼 해 주세요","請做成照片這樣"],["너무 짧지 않게 해 주세요","請不要剪太短"],["통역기를 사용해도 될까요?","可以使用翻譯軟體嗎？"],["아프면 말씀드릴게요","痛的話我會告訴你"]],
-"緊急／問路":[["화장실이 어디예요?","請問廁所在哪裡？"],["엘리베이터가 어디예요?","電梯在哪裡？"],["도와주세요","請幫幫我們"],["길을 잃었어요","我們迷路了"],["병원이 어디예요?","醫院在哪裡？"]]
-};
-
-let currentDay=0,editExpenseId=null,editPackingId=null;
-function showPage(id){document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id===id));document.querySelectorAll(".nav-btn").forEach(x=>x.classList.toggle("active",x.dataset.page===id));window.scrollTo(0,0)}
-document.querySelectorAll(".nav-btn").forEach(b=>b.onclick=()=>showPage(b.dataset.page));
-function setHero(){const now=new Date(),busan=now>=new Date("2026-08-01T14:42:00+09:00");heroCity.textContent=busan?"BUSAN":"SEOUL";hero.style.backgroundImage=`url('${busan?"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85":"https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1600&q=85"}')`;const diff=Math.ceil((new Date("2026-07-30T01:25:00+08:00")-now)/86400000);countdown.textContent=diff>0?`距離出發 ${diff} 天`:diff>=-6?"旅程進行中":"旅行回憶"}
-function renderDays(){dayChips.innerHTML=days.map((d,i)=>`<button class="day-chip ${i===currentDay?"active":""}" onclick="currentDay=${i};renderDays();renderTimeline()">${d.date} ${d.title}</button>`).join("")}
-function tagHtml(kind){let s="";if(kind.includes("booked"))s+='<span class="tag booked">已預訂</span>';if(kind.includes("pass"))s+='<span class="tag pass">釜山 Pass</span>';if(kind.includes("guide"))s+='<span class="tag">景點 Guide</span>';return s}
-function mapLinks(name){const q=encodeURIComponent(name+" 韓國");return `<a class="btn soft" target="_blank" href="https://map.naver.com/p/search/${q}">NAVER</a><a class="btn white" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${q}">Google</a>`}
-function renderTimeline(){timeline.innerHTML=days[currentDay].items.map((x,i)=>{const g=guides[x[1]];return `<div class="event"><div class="time">${x[0]}</div><h3>${x[1]}</h3><div class="meta">${x[2]}</div><div class="tags">${tagHtml(x[3])}</div><div class="transport">🚇 ${x[4]}</div><div class="actions">${mapLinks(x[1])}${g?`<button class="btn primary" onclick="document.getElementById('g${currentDay}-${i}').classList.toggle('open')">Guide</button>`:""}</div>${g?`<div class="guide" id="g${currentDay}-${i}">${g[2]?`<img class="guide-photo" loading="lazy" src="${g[2]}" alt="${x[1]}">`:""}<p><b>這裡在做什麼：</b>${g[0]}</p><p><b>旅行提醒：</b>${g[1]}</p></div>`:""}</div>`}).join("")}
-function renderDistricts(active=Object.keys(places)[0]){districtTabs.innerHTML=Object.keys(places).map(k=>`<button onclick="renderDistricts('${k}')">${k}</button>`).join("");placeGrid.innerHTML=places[active].map(p=>`<div class="place-card"><h3>${p[0]}</h3><p>${p[1]}・${p[2]}</p><div class="actions">${mapLinks(p[0])}</div></div>`).join("")}
-function twdPerPerson(e){let t=e.currency==="KRW"?e.amount*KRW_RATE:e.amount;return e.scope==="person"?t:t/2}
-function renderExpenses(){const total=expenses.reduce((a,e)=>a+twdPerPerson(e),0);budgetTotal.textContent=`NT$${Math.round(total).toLocaleString()}`;paidSummary.textContent=`NT$${Math.round(total).toLocaleString()}`;budgetBar.style.width=Math.min(100,total/50000*100)+"%";expenseList.innerHTML=expenses.map(e=>`<div class="expense-row"><div class="grow"><b>${e.name}</b><div class="sub">${e.category}・${e.status}・${e.scope==="person"?"每人":"兩人總價"}</div></div><div style="text-align:right"><b>${e.currency==="KRW"?"₩":"NT$"}${Number(e.amount).toLocaleString()}</b><div class="sub">約 NT$${Math.round(twdPerPerson(e)).toLocaleString()}/人</div></div><button class="icon-btn" onclick="editExpense(${e.id})">✎</button><button class="icon-btn danger" onclick="deleteExpense(${e.id})">⌫</button></div>`).join("");localStorage.setItem("tripExpenses",JSON.stringify(expenses))}
-function openExpenseModal(){editExpenseId=null;expenseModalTitle.textContent="新增支出";["expenseName","expenseAmount"].forEach(id=>document.getElementById(id).value="");expenseModal.classList.add("open")}
-function editExpense(id){const e=expenses.find(x=>x.id===id);editExpenseId=id;expenseModalTitle.textContent="修改支出";expenseName.value=e.name;expenseAmount.value=e.amount;expenseCurrency.value=e.currency;expenseScope.value=e.scope;expenseStatus.value=e.status;expenseCategory.value=e.category;expenseModal.classList.add("open")}
-function saveExpense(){if(!expenseName.value||!expenseAmount.value)return alert("請輸入名稱與金額");const obj={id:editExpenseId||Date.now(),name:expenseName.value,amount:+expenseAmount.value,currency:expenseCurrency.value,scope:expenseScope.value,status:expenseStatus.value,category:expenseCategory.value};expenses=editExpenseId?expenses.map(e=>e.id===editExpenseId?obj:e):[...expenses,obj];closeModal("expenseModal");renderExpenses()}
-function deleteExpense(id){if(confirm("確定刪除這筆支出？")){expenses=expenses.filter(e=>e.id!==id);renderExpenses()}}
-function renderPacking(){const cats=[...new Set(packing.map(x=>x.category))],done=packing.filter(x=>x.done).length;packingProgress.textContent=`${done}/${packing.length}`;packingBar.style.width=(packing.length?done/packing.length*100:0)+"%";packingList.innerHTML=cats.map(c=>`<h3 class="category-title">${c}</h3>`+packing.filter(x=>x.category===c).map(x=>`<div class="check-row ${x.done?"done":""}"><input type="checkbox" ${x.done?"checked":""} onchange="togglePacking(${x.id})"><div class="grow">${x.name}</div><button class="icon-btn" onclick="editPacking(${x.id})">✎</button><button class="icon-btn danger" onclick="deletePacking(${x.id})">⌫</button></div>`).join("")).join("");localStorage.setItem("tripPacking",JSON.stringify(packing))}
-function togglePacking(id){packing=packing.map(x=>x.id===id?{...x,done:!x.done}:x);renderPacking()}
-function openPackingModal(){editPackingId=null;packingModalTitle.textContent="新增行李項目";packingName.value="";packingModal.classList.add("open")}
-function editPacking(id){const x=packing.find(p=>p.id===id);editPackingId=id;packingModalTitle.textContent="修改行李項目";packingName.value=x.name;packingCategory.value=x.category;packingModal.classList.add("open")}
-function savePacking(){if(!packingName.value)return alert("請輸入項目");const old=packing.find(x=>x.id===editPackingId);const obj={id:editPackingId||Date.now(),name:packingName.value,category:packingCategory.value,done:old?.done||false};packing=editPackingId?packing.map(x=>x.id===editPackingId?obj:x):[...packing,obj];closeModal("packingModal");renderPacking()}
-function deletePacking(id){if(confirm("確定刪除此項目？")){packing=packing.filter(x=>x.id!==id);renderPacking()}}
-function renderPhrases(){phraseList.innerHTML=Object.entries(phrases).map(([c,arr])=>`<h3 class="category-title">${c}</h3>`+arr.map(p=>`<div class="phrase-row"><div class="grow"><div class="phrase-korean">${p[0]}</div><div class="sub">${p[1]}</div></div><button class="icon-btn" onclick="speak('${p[0].replaceAll("'","\\'")}')">🔊</button></div>`).join("")).join("")}
-function speak(text){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang="ko-KR";u.rate=.78;speechSynthesis.speak(u)}
-function closeModal(id){document.getElementById(id).classList.remove("open")}
-momToggle.onclick=()=>{document.body.classList.toggle("mom");momToggle.textContent=document.body.classList.contains("mom")?"✓ 媽媽模式中":"👩 媽媽模式";if(document.body.classList.contains("mom")&&document.getElementById("budget").classList.contains("active"))showPage("home")}
-document.querySelectorAll(".modal").forEach(m=>m.onclick=e=>{if(e.target===m)m.classList.remove("open")});
-setHero();renderDays();renderTimeline();renderDistricts();renderExpenses();renderPacking();renderPhrases();
-</script>
-</body>
-</html>
+<div class="modal" id="expenseModal"><div class="sheet"><div class="sheet-head"><h3 id="expenseModalTitle">新增支出</h3><button class="icon-btn" onclick="closeModal('expenseModal')">✕</button></div><form class="form" id="expenseForm"><input type="hidden" id="expenseId"><input id="expenseName" placeholder="項目名稱" required><div class="form-grid"><input id="expenseAmount" type="number" min="0" step="0.01" placeholder="金額" required><select id="expenseCurrency"><option>TWD</option><option>KRW</option></select></div><div class="form-grid"><select id="expenseCategory"><option>機票</option><option>住宿</option><option>交通</option><option>票券</option><option>網路</option><option>美容</option><option>餐飲</option><option>購物</option><option>其他</option></select><select id="expenseStatus"><option>已付款</option><option>待付款</option></select></div><button class="btn primary" type="submit">儲存</button></form></div></div>
+<div class="modal" id="packingModal"><div class="sheet"><div class="sheet-head"><h3 id="packingModalTitle">新增行李項目</h3><button class="icon-btn" onclick="closeModal('packingModal')">✕</button></div><form class="form" id="packingForm"><input type="hidden" id="packingId"><input id="packingName" placeholder="物品名稱" required><div class="form-grid"><select id="packingTypeInput"><option>隨身物品</option><option>托運行李</option></select><input id="packingCategory" placeholder="細項分類，例如：證件"></div><button class="btn primary" type="submit">儲存</button></form></div></div>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
