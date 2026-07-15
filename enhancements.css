@@ -1,0 +1,30 @@
+/* Unified typography and enhanced translator / phrase UI. */
+html,body,button,input,select,textarea,
+.serif,.section-title h2,.intro h1,.airport-code,.flight-leg time,
+.hotel-card h3,.event h3,.place-card h3,.budget-input,.convert-result,
+.packing-category,.category-title,.sheet-head h3,.phrase-korean{
+  font-family:"Noto Serif TC","Noto Serif KR",serif!important;
+}
+body{font-weight:500;letter-spacing:.01em}
+button,input,select,textarea{font-weight:500}
+.subtitle{font-weight:600}
+.translation-actions,.translation-tools{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.translation-result{min-height:112px;padding:15px 16px;border:1px solid var(--line);border-radius:14px;background:#f5f8fb;font-size:1.08rem;line-height:1.85;white-space:pre-wrap;word-break:break-word}
+.translation-result.loading{color:var(--muted)}
+.phrase-title{margin-top:28px}
+.phrase-category-tabs{display:flex;gap:8px;overflow-x:auto;padding:0 2px 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.phrase-category-tabs::-webkit-scrollbar{display:none}
+.phrase-category-button{flex:0 0 auto;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:10px 14px;white-space:nowrap;font-weight:700}
+.phrase-category-button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.phrase-row{align-items:flex-start}
+.phrase-korean{font-size:1.08rem;line-height:1.55}
+.phrase-row .subline{margin-top:4px;font-size:.82rem}
+.phrase-tools{display:flex;gap:6px;flex:0 0 auto}
+.phrase-tools .icon-btn{min-width:42px;min-height:42px}
+body.mom .translation-result{font-size:1.3rem}
+body.mom .phrase-korean{font-size:1.35rem}
+body.mom .phrase-row .subline{font-size:1.08rem}
+@media(max-width:430px){
+  .translation-actions,.translation-tools{grid-template-columns:1fr}
+  .phrase-category-button{padding:10px 13px}
+}
