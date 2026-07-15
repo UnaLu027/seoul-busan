@@ -1,75 +1,57 @@
 const itinerary=[
-{date:'7/30',title:'首爾抵達・明洞・盤浦',events:[
-['01:25–05:00','真航空 LJ734｜桃園 T1 → 仁川 T2','托運 15 kg × 1 件／人','已購票',''],
-['05:30–07:00','仁川機場 → Hotel Botanik Sewoon','AREX 至弘大入口，再轉地鐵前往乙支路三街；拖行李時也可從首爾站改搭計程車。','','乙支路三街站：飯店方向使用 12 號出口，優先依站內電梯標示移動。'],
-['07:00','Hotel Botanik Sewoon 寄放行李','','',''],
-['08:00–09:30','Artist Bakery／Onion 安國早餐','飯店 → 安國：地鐵 3 號線或計程車。','','安國站：Artist Bakery 建議 1 號出口；Onion 建議 3 號出口。'],
-['09:30–11:00','樂天免稅店乙支路入口','安國 → 乙支路入口，地鐵或計程車。','','乙支路入口站：依樂天百貨館內連通出口前往。'],
-['11:00–14:00','明洞 avahair 剪髮','已預約 2 人。','已預約','明洞站或乙支路入口站，依分店位置選最近出口。'],
-['14:00–19:00','明洞逛街','探索頁查看服飾、美妝、百貨與餐廳清單。','','明洞站 5、6 號出口較接近主要商圈。'],
-['19:00–20:00','鐘路三街布帳馬車／DK 勝寛微醺 live 韓食','依當天排隊狀況二選一。','','鐘路三街站依店家位置選出口。'],
-['20:00–20:30','回飯店 Check-in','','','乙支路三街站 12 號出口。'],
-['20:30–21:30','盤浦大橋彩虹瀑布','飯店搭計程車前往，減少跨線轉乘。','',''],
-['21:30–24:00','樂天超市首爾站','盤浦 → 首爾站搭計程車；購物後回飯店。','','']
-]},
-{date:'7/31',title:'安國・弘大',events:[
-['07:00–08:00','London Bagel Museum 安國','建議提早抵達。','','安國站 2 號出口較接近北側巷區。'],
-['08:00–08:30','NEWMIX 咖啡伴手禮','步行前往。','',''],
-['08:30–10:30','回 Hotel Botanik 休息','安國 → 乙支路三街。','','乙支路三街站 12 號出口。'],
-['10:30–14:00','安國逛街・豆漿麵・無垢屋','探索頁查看香氛、選物與餐廳。','','安國站 1、2、3 號出口依區域使用。'],
-['14:00–14:30','安國 → 弘大','地鐵 3 號線轉 2 號線，或計程車。','','弘大入口站 8／9 號出口接近主要逛街區。'],
-['14:30–18:00','弘大逛街','依探索頁分類挑選店家。','','AK Plaza 可由 4 號出口；主要商圈多使用 8、9 號出口。'],
-['18:00–19:30','lala&kay DK 同款韓餐','','',''],
-['19:30–20:00','Touch Five 報到','KKday 已購票。','已購票',''],
-['20:00–22:00','Touch Five','','已購票','']
-]},
-{date:'8/1',title:'首爾 → 釜山・廣安里',events:[
-['09:00','Hotel Botanik Check-out','行李寄放後再出發。','',''],
-['09:00–10:30','德壽宮','乙支路三街 → 市廳。','','市廳站 2 號出口接近德壽宮大漢門。'],
-['10:30–11:30','Hello Kitty 咖啡廳','','',''],
-['11:30–13:00','明洞大創','','','明洞站主要商圈出口 5、6。'],
-['13:00–14:00','兔子停咖哩烏龍麵','','',''],
-['14:42–17:23','KTX 首爾站 → 釜山站','已預訂；提早 25–30 分鐘到月台。','已預訂',''],
-['17:23–18:00','釜山站 → Gwangalli Hotel 1','拖行李直接搭計程車。','',''],
-['18:00–18:45','Gwangan 第一小吃炸雞','','',''],
-['18:45–19:30','步行至 Yacht Holic 集合處並報到','','已預訂',''],
-['19:30–20:30','Yacht Holic 遊艇・煙火・無人機秀','已付款 ₩62,400／2 人。','已預訂',''],
-['20:30–22:00','Salmon Brother','','',''],
-['22:00–23:30','Aqua Palace 夜景汗蒸幕','釜山 Pass。','釜山 Pass','']
-]},
-{date:'8/2',title:'甘川洞・松島・影島・海雲台',events:[
-['08:30–09:30','CASA BUSANO 廣安店','','',''],['09:30–10:00','廣安里 → 甘川洞','跨區搭計程車較省時間。','',''],['10:00–12:00','甘川洞韓服體驗','釜山 Pass。','釜山 Pass',''],['12:00–14:00','手翻書・小王子拍照','釜山 Pass。','釜山 Pass',''],['14:00–16:00','松島海上纜車・龍宮雲橋','甘川洞 → 松島計程車。','釜山 Pass',''],['16:00–18:30','白淺灘文化村・Arte Museum','松島 → 影島搭計程車。','釜山 Pass',''],['18:30–19:00','影島 → X the Sky','跨區直接搭計程車。','',''],['19:00–20:30','X the Sky・高空 Starbucks','釜山 Pass。','釜山 Pass',''],['20:30–23:00','Spa Land 汗蒸幕','可搓澡；釜山 Pass。','釜山 Pass','']
-]},
-{date:'8/3',title:'海岸列車・機張・海東龍宮寺',events:[
-['08:30–09:00','海雲台膠囊列車｜尾浦 → 青沙浦','已預訂。','已預訂',''],['09:00–11:30','青沙浦｜DIART・Liberta・Broni','','',''],['11:30–12:00','海岸列車｜青沙浦 → 松亭','釜山 Pass。','釜山 Pass',''],['12:00–14:00','機張斜坡滑車','松亭站轉計程車約 8 分鐘。','釜山 Pass',''],['14:00–15:00','Brick Campus','釜山 Pass。','釜山 Pass',''],['15:00–16:00','海東龍宮寺','','',''],['16:00–16:30','松亭海邊','','',''],['16:30–17:00','海岸列車｜松亭 → 尾浦','釜山 Pass。','釜山 Pass',''],['17:00–18:30','尾浦家生醃海鮮・烤鹽麵包','釜山 Pass 9 折。','釜山 Pass',''],['18:30–21:00','Club D Oasis 海景汗蒸幕','釜山 Pass。','釜山 Pass','']
-]},
-{date:'8/4',title:'溫泉洞・西面田浦・南浦・返台',events:[
-['08:00–08:30','Hotel 1 Check-out','建議提早出發並處理行李寄放。','',''],['08:30–09:10','Hotel 1 → 周浩鎮的家','一早搭計程車前往溫泉洞。','',''],['09:10–10:30','周浩鎮的家','釜山東萊區溫泉洞 1214-6。','',''],['10:30–11:00','溫泉洞 → 西面／田浦','計程車。','',''],['11:00–13:00','西面・田浦逛街／釜田市場','','','西面站依目的地選出口；田浦咖啡街可由田浦站步行。'],['13:00–13:30','西面 → dday 南浦洞','計程車，避免轉乘。','',''],['13:30–17:00','dday 醫美','尚未預約；預留報到、諮詢、療程、冰敷與結帳。','待預約',''],['17:00–18:00','南浦洞 → 金海機場 T1','搭計程車並保留塞車緩衝。','',''],['20:00–21:20','中華航空 CI187｜金海 T1 → 桃園 T1','托運 23 kg × 2 件／人＋手提行李。','已購票','']
-]}];
+{date:"7/30",title:"首爾抵達・明洞・盤浦",events:[
+{time:"01:25–05:00",title:"真航空 LJ734｜桃園 T1 → 仁川 T2",detail:"托運 15 kg × 1 件／人。",status:"已購票"},
+{time:"05:30–07:00",title:"仁川機場 → Hotel Botanik Sewoon",detail:"搭 AREX 至弘大入口，再轉地鐵前往乙支路三街；拖行李時也可從首爾站改搭計程車。",exit:"乙支路三街站：前往飯店優先依站內電梯標示移動；12 號出口為飯店方向。",mapQuery:"Hotel Botanik Sewoon Myeongdong"},
+{time:"07:00",title:"Hotel Botanik Sewoon 寄放行李",mapQuery:"Hotel Botanik Sewoon Myeongdong"},
+{time:"08:00–09:30",title:"Artist Bakery／Onion 安國早餐",detail:"飯店前往安國，以地鐵 3 號線或計程車移動。",exit:"安國站：Artist Bakery 建議 1 號出口；Onion 建議 3 號出口。",mapQuery:"Artist Bakery Anguk Seoul"},
+{time:"09:30–11:00",title:"樂天免稅店乙支路入口",detail:"從安國前往乙支路入口。",exit:"乙支路入口站：由樂天百貨館內連通動線前往。",mapQuery:"Lotte Duty Free Myeongdong"},
+{time:"11:00–14:00",title:"明洞 avahair 剪髮",detail:"已預約 2 人。",status:"已預約",mapQuery:"Ava Hair Myeongdong"},
+{time:"14:00–19:00",title:"明洞逛街",detail:"探索頁可依服飾、美妝、選物與食品分類查看。",exit:"明洞站 5、6 號出口較接近主要商圈。",mapQuery:"Myeongdong Seoul"},
+{time:"19:00–20:00",title:"鐘路三街布帳馬車／DK 勝寛微醺 live 韓食",detail:"依當天排隊狀況二選一。",mapQuery:"Jongno 3-ga Seoul"},
+{time:"20:00–20:30",title:"回飯店 Check-in",exit:"乙支路三街站 12 號出口。",mapQuery:"Hotel Botanik Sewoon Myeongdong"},
+{time:"20:30–21:30",title:"盤浦大橋彩虹瀑布",detail:"從飯店搭計程車前往。",mapQuery:"Banpo Bridge Moonlight Rainbow Fountain"},
+{time:"21:30–24:00",title:"樂天超市首爾站",detail:"盤浦搭計程車至首爾站，購物後回飯店。",mapQuery:"Lotte Mart Zettaplex Seoul Station"}]},
+{date:"7/31",title:"安國・弘大",events:[
+{time:"07:00–08:00",title:"London Bagel Museum 安國",detail:"建議提早抵達。",exit:"安國站 2 號出口較接近北側巷區。",mapQuery:"London Bagel Museum Anguk"},
+{time:"08:00–08:30",title:"NEWMIX 咖啡伴手禮",detail:"由 London Bagel 步行前往。",mapQuery:"NEWMIX Coffee Anguk"},
+{time:"08:30–10:30",title:"回 Hotel Botanik 休息",exit:"乙支路三街站 12 號出口。",mapQuery:"Hotel Botanik Sewoon Myeongdong"},
+{time:"10:30–14:00",title:"安國逛街・豆漿麵・無垢屋",detail:"探索頁可查看香氛、文創、服飾與餐廳。",exit:"安國站 1、2、3 號出口依目的地使用。",mapQuery:"Anguk-dong Seoul"},
+{time:"14:00–14:30",title:"安國 → 弘大",detail:"搭地鐵 3 號線轉 2 號線，或直接搭計程車。",exit:"弘大入口站 8、9 號出口接近主要逛街區。"},
+{time:"14:30–18:00",title:"弘大逛街",detail:"依探索頁分類挑選店家。",exit:"AK Plaza 可由 4 號出口；主要商圈多使用 8、9 號出口。",mapQuery:"Hongdae Seoul"},
+{time:"18:00–19:30",title:"lala&kay DK 同款韓餐",mapQuery:"lala kay Hongdae"},
+{time:"19:30–20:00",title:"Touch Five 報到",detail:"KKday 已購票。",status:"已購票",mapQuery:"Touch Five Hongdae"},
+{time:"20:00–22:00",title:"Touch Five",status:"已購票",mapQuery:"Touch Five Hongdae"}]},
+{date:"8/1",title:"首爾 → 釜山・廣安里",events:[
+{time:"09:00",title:"Hotel Botanik Check-out",detail:"行李寄放後再出發。",mapQuery:"Hotel Botanik Sewoon Myeongdong"},
+{time:"09:00–10:30",title:"德壽宮",detail:"乙支路三街前往市廳。",exit:"市廳站 2 號出口接近德壽宮大漢門。",mapQuery:"Deoksugung Palace"},
+{time:"10:30–11:30",title:"Hello Kitty 咖啡廳",mapQuery:"Hello Kitty Cafe Myeongdong"},
+{time:"11:30–13:00",title:"明洞大創",exit:"明洞站 5、6 號出口。",mapQuery:"Daiso Myeongdong"},
+{time:"13:00–14:00",title:"兔子停咖哩烏龍麵",mapQuery:"Seoul Station curry udon"},
+{time:"14:42–17:23",title:"KTX｜首爾站 → 釜山站",detail:"已預訂；建議提早 25–30 分鐘到月台。",status:"已預訂"},
+{time:"17:23–18:00",title:"釜山站 → Gwangalli Hotel 1",detail:"拖行李直接搭計程車。",mapQuery:"Gwangalli Hotel 1 Busan"},
+{time:"18:00–18:45",title:"Gwangan 第一小吃炸雞",mapQuery:"Gwangan first snack chicken Busan"},
+{time:"18:45–19:30",title:"步行至 Yacht Holic 集合處並報到",status:"已預訂",mapQuery:"Yacht Holic Busan"},
+{time:"19:30–20:30",title:"Yacht Holic 遊艇・煙火・無人機秀",detail:"已付款 ₩62,400／2 人。",status:"已預訂",mapQuery:"Yacht Holic Busan"},
+{time:"20:30–22:00",title:"Salmon Brother",mapQuery:"Salmon Brother Gwangalli"},
+{time:"22:00–23:30",title:"Aqua Palace 夜景汗蒸幕",detail:"使用釜山 Pass。",status:"釜山 Pass",mapQuery:"Hotel Aqua Palace Spa Busan"}]},
+{date:"8/2",title:"甘川洞・松島・影島・海雲台",events:[
+{time:"08:30–09:30",title:"CASA BUSANO 廣安店",mapQuery:"Casa Busano Gwangalli"},{time:"09:30–10:00",title:"廣安里 → 甘川洞",detail:"跨區搭計程車較省時間。"},{time:"10:00–12:00",title:"甘川洞韓服體驗",detail:"使用釜山 Pass。",status:"釜山 Pass",mapQuery:"Gamcheon Culture Village Hanbok"},{time:"12:00–14:00",title:"手翻書・小王子拍照",detail:"使用釜山 Pass。",status:"釜山 Pass",mapQuery:"Gamcheon Culture Village Little Prince"},{time:"14:00–16:00",title:"松島海上纜車・龍宮雲橋",detail:"甘川洞前往松島搭計程車。",status:"釜山 Pass",mapQuery:"Songdo Marine Cable Car Busan"},{time:"16:00–18:30",title:"白淺灘文化村・Arte Museum",detail:"松島前往影島搭計程車。",status:"釜山 Pass",mapQuery:"Huinnyeoul Culture Village Busan"},{time:"18:30–19:00",title:"影島 → X the Sky",detail:"跨區直接搭計程車。"},{time:"19:00–20:30",title:"X the Sky・高空 Starbucks",detail:"使用釜山 Pass。",status:"釜山 Pass",mapQuery:"Busan X the Sky"},{time:"20:30–23:00",title:"Spa Land 汗蒸幕",detail:"可搓澡；使用釜山 Pass。",status:"釜山 Pass",mapQuery:"Spa Land Centum City"}]},
+{date:"8/3",title:"海岸列車・機張・海東龍宮寺",events:[
+{time:"08:30–09:00",title:"海雲台膠囊列車｜尾浦 → 青沙浦",detail:"已預訂。",status:"已預訂",mapQuery:"Haeundae Sky Capsule Mipo"},{time:"09:00–11:30",title:"青沙浦｜DIART・Liberta・Broni",mapQuery:"Cheongsapo Busan"},{time:"11:30–12:00",title:"海岸列車｜青沙浦 → 松亭",detail:"使用釜山 Pass。",status:"釜山 Pass"},{time:"12:00–14:00",title:"機張斜坡滑車",detail:"松亭站轉計程車約 8 分鐘。",status:"釜山 Pass",mapQuery:"Skyline Luge Busan"},{time:"14:00–15:00",title:"Brick Campus",status:"釜山 Pass",mapQuery:"Brick Campus Busan"},{time:"15:00–16:00",title:"海東龍宮寺",mapQuery:"Haedong Yonggungsa Temple"},{time:"16:00–16:30",title:"松亭海邊",mapQuery:"Songjeong Beach Busan"},{time:"16:30–17:00",title:"海岸列車｜松亭 → 尾浦",detail:"使用釜山 Pass。",status:"釜山 Pass"},{time:"17:00–18:30",title:"尾浦家生醃海鮮・烤鹽麵包",detail:"釜山 Pass 9 折。",status:"釜山 Pass",mapQuery:"Mipojib Haeundae"},{time:"18:30–21:00",title:"Club D Oasis 海景汗蒸幕",detail:"使用釜山 Pass。",status:"釜山 Pass",mapQuery:"Club D Oasis Busan"}]},
+{date:"8/4",title:"溫泉洞・西面田浦・南浦・返台",events:[
+{time:"08:00–08:30",title:"Hotel 1 Check-out",detail:"提早出發並處理行李寄放。",mapQuery:"Gwangalli Hotel 1 Busan"},{time:"08:30–09:10",title:"Hotel 1 → 周浩鎮的家",detail:"一早搭計程車前往溫泉洞。",mapQuery:"釜山广域市 东莱区 温泉洞 1214-6",naver:"https://naver.me/GGGeo3tZ"},{time:"09:10–10:30",title:"周浩鎮的家",detail:"釜山東萊區溫泉洞 1214-6。",mapQuery:"釜山广域市 东莱区 温泉洞 1214-6",naver:"https://naver.me/GGGeo3tZ"},{time:"10:30–11:00",title:"溫泉洞 → 西面／田浦",detail:"搭計程車。"},{time:"11:00–13:00",title:"西面・田浦逛街／釜田市場",exit:"西面站依目的地選出口；田浦咖啡街可由田浦站步行。",mapQuery:"Seomyeon Busan"},{time:"13:00–13:30",title:"西面 → dday 南浦洞",detail:"搭計程車，避免轉乘。"},{time:"13:30–17:00",title:"dday 醫美",detail:"尚未預約；預留報到、諮詢、療程、冰敷與結帳。",status:"待預約",mapQuery:"釜山广域市 中区 南浦洞二街 25-10",naver:"https://naver.me/FBMzkA0j"},{time:"17:00–18:00",title:"南浦洞 → 金海機場 T1",detail:"搭計程車並保留塞車緩衝。"},{time:"20:00–21:20",title:"中華航空 CI187｜金海 T1 → 桃園 T1",detail:"托運 23 kg × 2 件／人＋手提行李。",status:"已購票"}]}];
 
 const places={
-'弘大':[
-['MUSINSA HONGDAE','潮流','韓國大型潮流選品店，適合看韓系服飾、鞋款與配件。'],['MUSINSA KICKS','鞋履','以球鞋與街頭鞋款為主的 MUSINSA 店型。'],['AK PLAZA 弘大','百貨','弘大站旁的複合商場，餐飲、服飾與快閃店集中。'],['EE PLACE 弘大店','選物','截圖標註的選物／購物地點，建議以 NAVER 店頁確認當期品牌。'],['fwee','美妝','韓國彩妝品牌，熱門品項以唇頰彩與底妝為主。'],['Yussopul 延南店','香氛','截圖標註的延南洞香氛店，可試聞香水與香氛產品。'],['Subako','角色商品','以三麗鷗等可愛角色周邊為主的店。'],['VICXXO 弘益大學店','飾品','平價飾品與日常配件店。'],['Cream Market','服飾','弘大女裝逛街點，適合找韓系流行款。'],['Rwinneu','服飾','截圖標註的弘大女裝店。'],['Rokeu 弘大店','服飾','截圖標註的服飾店，建議現場依款式快速挑選。'],['common unique','服飾','韓國網路女裝品牌實體店，風格偏韓系日常。'],['4233 Maeum Center 延南店','體驗','以關係與心理主題互動內容聞名的體驗空間。'],['aeptoetu 生日蛋糕店','甜點','客製或造型生日蛋糕店，適合拍照與預訂蛋糕。'],['Paet EO 延南店','甜點','截圖標註的延南洞甜點／蛋糕店。'],['Momo','咖啡','延南洞咖啡休息點。'],['CLO 牛仔褲店','服飾','以牛仔褲為主的店，適合試版型。'],['ASON','選物','截圖標註的弘大選物店。'],['Touch Five 專用館','表演','已購票的夜間表演場地，需預留報到時間。'],['lala&kay','餐廳','DK 同款韓餐，安排在 Touch Five 前用餐。'],['DK 同款瑪德蓮咖啡廳','咖啡','截圖中標註的 DK 同款咖啡廳，名稱需再以 NAVER 清單核對。'],['邊佑錫朋友的烤肉店','餐廳','截圖標註的名人關聯烤肉店，正式店名需以 NAVER 清單核對。'],['Autograph 收藏品','收藏','偶像／簽名收藏品相關店。']
-],
-'明洞':[
-['樂天免稅店 明洞總店','免稅','百貨樓上的大型免稅店，適合集中購買品牌商品。'],['LOEWE 樂天免稅店','精品','LOEWE 專櫃，位於樂天免稅商圈。'],['NUMBERING／截圖標註店','飾品','截圖中位於樂天商圈附近的飾品品牌，店名需核對。'],['ZARA 明洞','服飾','大型快時尚門市。'],['8seconds 明洞店','服飾','韓國本土快時尚品牌。'],['IPITI 明洞店','服飾','截圖標註的明洞服飾店。'],['SINUN 明洞店','服飾','韓國設計師服飾品牌門市。'],['Matin Kim 明洞旗艦店','服飾','韓國熱門設計師品牌，包款與服飾都很受歡迎。'],['Adidas 明洞','運動','運動服飾與鞋款。'],['NYUNYU 世界明洞店','飾品','大型平價飾品店，品項多、適合預留較長時間。'],['Rakpiswi Weather','服飾','截圖標註的明洞服飾店。'],['NAU NEW 明洞店','服飾','截圖標註的服飾店。'],['Cozy Mood 明洞店','服飾','韓系女裝與日常穿搭。'],['Olive Young 明洞旗艦店','美妝','大型美妝與保健用品門市。'],['Hello Kitty 蘋果咖啡廳','咖啡','Hello Kitty 主題咖啡與拍照點。'],['烏達里家醬蟹','餐廳','以醬蟹與韓式海鮮料理聞名。'],['明洞大創','生活','多樓層生活雜貨與伴手禮採買點。'],['Redi／藥美利光藥局','藥妝','截圖標註的藥局，適合購買常用藥妝。'],['Nun Square','商場','明洞購物商場與集合點。']
-],
-'安國':[
-['Artist Bakery','麵包','人氣鹽麵包店，安排抵達首爾後早餐。'],['Onion 安國','咖啡','韓屋風格咖啡廳，空間與建築很有特色。'],['London Bagel Museum 安國','麵包','熱門貝果店，建議早到減少候位。'],['NEWMIX Coffee','伴手禮','咖啡與咖啡伴手禮店。'],['Zero Space','選物','文具、插畫與可愛小物選品店。'],['Hati Hati House','甜點','截圖標註的韓屋甜點／雪花冰店。'],['Cafe Sudal','咖啡','安國巷內咖啡休息點。'],['黃生家刀切麵・豆漿麵','餐廳','以刀切麵與豆漿麵等韓式麵食為主。'],['無垢屋','選物','截圖標註的安國選物／鞋店。'],['TAMBURINS 安國','香氛','韓國香氛品牌門市，可試聞香水與護手霜。'],['GRANHAND','香氛','韓國香氛品牌，商品包含香水與居家香氛。'],['Youssoful 香水','香氛','截圖標註的香水店。'],['國際畫廊','藝文','當代藝術畫廊。'],['學古齋','藝文','韓國知名畫廊，展示近現代藝術。'],['全北道美術館／藝文空間','藝文','截圖標註的藝文展覽點。']
-],
-'釜山':[
-['甘川洞文化村','景點','山坡彩色聚落，安排韓服、手翻書與小王子拍照。'],['松島海上纜車','景點','跨越海面的纜車，可看松島海岸景觀。'],['松島龍宮雲橋','景點','海岸步道與觀景橋。'],['白淺灘文化村','景點','影島海岸聚落與咖啡街，坡道較多。'],['Arte Museum Busan','展覽','沉浸式媒體藝術展覽。'],['X the Sky','景點','海雲台高樓觀景台與高空咖啡廳。'],['Spa Land','汗蒸幕','新世界百貨內大型汗蒸幕，可安排搓澡。'],['海雲台膠囊列車','交通景點','沿海高架小列車，已預訂尾浦至青沙浦。'],['海東龍宮寺','景點','臨海寺廟，需步行與上下階梯。'],['Club D Oasis','汗蒸幕','海雲台海景汗蒸幕。'],['Gwangalli Hotel 1','住宿','廣安里海景住宿，Premium Ocean Front Suite。'],['Yacht Holic','活動','廣安里夜間遊艇、煙火與無人機秀。'],['周浩鎮的家','景點','東萊區溫泉洞 1214-6，8/4 一早前往。'],['dday 醫美','美容','南浦洞醫美診所，尚未預約，需預留 3–3.5 小時。']
-]};
+"弘大":[
+{name:"MUSINSA HONGDAE",category:"潮流",description:"韓國大型潮流選品店，服飾、鞋款與配件品牌集中。"},{name:"MUSINSA KICKS",category:"鞋履",description:"以球鞋與街頭鞋款為主的 MUSINSA 店型。"},{name:"AK PLAZA 弘大",category:"百貨",description:"弘大入口站旁的複合商場，餐飲、服飾、快閃店與 K-pop 相關店鋪集中。"},{name:"EE PLACE 弘大店",category:"選物",description:"弘大商圈內的選物購物地點。"},{name:"fwee 弘大",category:"美妝",description:"韓國彩妝品牌，熱門品項以唇頰彩與底妝為主。"},{name:"Yussopul 延南店",category:"香氛",description:"延南洞香氛店，可試聞香水與居家香氛。"},{name:"Subako",category:"角色商品",description:"販售三麗鷗等可愛角色周邊。"},{name:"VICXXO 弘益大學店",category:"飾品",description:"平價飾品與日常配件店。"},{name:"Cream Market",category:"服飾",description:"弘大女裝逛街點，適合找韓系流行款。"},{name:"Rwinneu",category:"服飾",description:"弘大女裝店，主打韓系日常穿搭。"},{name:"common unique",category:"服飾",description:"韓國網路女裝品牌實體店，風格偏韓系日常。"},{name:"4233 Maeum Center 延南店",category:"體驗",description:"以人際關係與心理主題互動內容聞名的體驗空間。"},{name:"aeptoetu 生日蛋糕店",category:"甜點",description:"造型生日蛋糕店，適合拍照或預訂蛋糕。"},{name:"Paet EO 延南店",category:"甜點",description:"延南洞甜點與蛋糕店。"},{name:"CLO",category:"服飾",description:"很厲害的牛仔褲店，適合試穿不同版型。",address:"首尔特别市 麻浦区 西桥洞 364-15",naver:"https://naver.me/GDQC55p1"},{name:"loof on",category:"選物",description:"弘大商圈內的選物與逛街地點。",address:"首尔特别市 麻浦区 西桥洞 364-26",naver:"https://naver.me/xllL11Aw"},{name:"Chakhan 皮鞋弘大旗艦店",category:"鞋履",description:"韓國女鞋品牌旗艦店，可試穿日常皮鞋、樂福鞋與跟鞋。",address:"首尔特别市 麻浦区 西桥洞 332-14",naver:"https://naver.me/xEXPqAjR"},{name:"Rokeu 弘大店",category:"服飾",description:"韓系服飾店，可搭配附近鞋店一起逛。",address:"首尔特别市 麻浦区 西桥洞 332-13",naver:"https://naver.me/F93cpzN9"},{name:"Yudeullen",category:"服飾",description:"弘大女裝與韓系穿搭店。",address:"首尔特别市 麻浦区 西桥洞 340-2",naver:"https://naver.me/xD8U6jne"},{name:"I AM JOY",category:"飾品",description:"弘大飾品店，可找耳環、項鍊與日常配件。",address:"首尔特别市 麻浦区 西桥洞 333-18",naver:"https://naver.me/5HyOEt5T"},{name:"韓國歐膩搭配服飾店",category:"服飾",description:"店員會協助搭配整套穿搭，適合不想自己慢慢配衣服時前往。",address:"首尔特别市 麻浦区 西桥洞 335-19",naver:"https://naver.me/FM9Q61SF"},{name:"ASON",category:"選物",description:"弘大選物店，適合順路看看服飾與生活小物。"},{name:"Touch Five 專用館",category:"表演",description:"已購票的夜間表演場地，需預留報到時間。"},{name:"lala&kay",category:"餐廳",description:"DK 同款韓餐，安排在 Touch Five 前用餐。"},{name:"DK 同款瑪德蓮咖啡廳",category:"咖啡",description:"DK 同款咖啡廳，可與弘大逛街路線一起安排。"},{name:"邊佑錫朋友的烤肉店",category:"餐廳",description:"弘大附近收藏的烤肉店。"}],
+"明洞":[
+{name:"樂天免稅店總店",category:"免稅",description:"位於樂天百貨內，可集中購買美妝、精品與伴手禮。"},{name:"LEMEME",category:"包包",description:"韓國包包品牌，適合看簡約通勤與日常款式。",address:"首尔特别市 中区 乙支路一街 140-1",naver:"https://naver.me/FEg1dZOg"},{name:"fwee",category:"美妝",description:"韓國彩妝品牌店，可試唇頰彩與底妝。",address:"首尔特别市 中区 小公洞 1",naver:"https://naver.me/xWIgi1f4"},{name:"Bricksand",category:"甜點",description:"以磚塊造型費南雪聞名，適合買伴手禮。",address:"首尔特别市 中区 明洞二街 50-11",naver:"https://naver.me/xEXPqMjy"},{name:"韓國寢具明洞總店",category:"家居",description:"韓國寢具店，可看枕頭、被品與居家用品。",address:"首尔特别市 中区 明洞二街 54-36",naver:"https://naver.me/FqIXHlJA"},{name:"Hetras 明洞",category:"香氛",description:"韓國居家香氛品牌，可試聞擴香與香氛噴霧。",address:"首尔特别市 中区 明洞二街 54-20",naver:"https://naver.me/F3EQo1mM"},{name:"Hemeko 明洞店",category:"美妝",description:"集合多個韓國彩妝與美妝品牌的選品店。",address:"首尔特别市 中区 明洞二街 51-6",naver:"https://naver.me/xNprlocX"},{name:"3CE Style Nanda 旗艦店明洞店",category:"美妝",description:"3CE 彩妝與 Style Nanda 服飾的旗艦空間。",address:"首尔特别市 中区 忠武路二街 66-2",naver:"https://naver.me/5hoIEgOm"},{name:"黃油店明洞中央店",category:"文創",description:"可愛生活小物與文創商品店。",address:"首尔特别市 中区 忠武路二街 66-10",naver:"https://naver.me/GXF7RRil"},{name:"EPT 明洞店",category:"鞋履",description:"韓國休閒鞋品牌店，適合試穿簡約日常鞋款。"},{name:"Sinun 明洞店",category:"服飾",description:"明洞韓系服飾店。"},{name:"Nyunyu 明洞店",category:"飾品",description:"大型平價飾品店，耳環、項鍊、髮飾與包包選擇多。"},{name:"Rockfish Weatherwear",category:"鞋履",description:"英倫風雨鞋、瑪莉珍鞋與配件品牌。"},{name:"NOW NEW 明洞店",category:"服飾",description:"明洞韓系女裝店。"},{name:"Matin Kim 明洞旗艦店",category:"服飾",description:"韓國潮流品牌旗艦店，包包、帽子與服飾是熱門品項。"},{name:"Hello Kitty 咖啡廳",category:"咖啡",description:"Hello Kitty 主題咖啡空間，適合拍照休息。"},{name:"明洞大創",category:"生活",description:"大型 Daiso，可集中購買生活用品與伴手禮。"},{name:"Olive Young 明洞",category:"美妝",description:"韓國美妝與保健品大型門市。"},{name:"Nun Square",category:"地標",description:"此處主要作為定位點，要去買的是 Nun Square 對面的龍鬚糖。"},{name:"龍鬚糖",category:"食品",description:"位於 Nun Square 對面，現場製作的傳統糖果伴手禮。"}],
+"安國":[
+{name:"Artist Bakery",category:"早餐",description:"安國人氣鹽麵包店，適合早上排隊用餐。"},{name:"Onion 安國",category:"咖啡",description:"由韓屋改造的人氣咖啡廳，主打麵包與韓屋空間。"},{name:"London Bagel Museum 安國",category:"早餐",description:"熱門貝果店，建議一早抵達。"},{name:"NEWMIX",category:"咖啡",description:"可購買咖啡相關伴手禮。"},{name:"OIMU Bukchon",category:"文創",description:"苦盡柑來風格的文創小物店，可印自己的韓國名字，也有書籤、髮夾等商品。",address:"首尔特别市 钟路区 安国洞 17-1",naver:"https://naver.me/FyAvxeAq"},{name:"Object 三清店",category:"文創",description:"文創選物店，有販售矮袋鼠相關商品。",address:"首尔特别市 钟路区 斋洞 9",naver:"https://naver.me/5re7MspI"},{name:"Verish 安國旗艦店",category:"內衣",description:"以舒適、好穿著稱的韓國內衣品牌旗艦店。",address:"首尔特别市 钟路区 斋洞 32-5",naver:"https://naver.me/GgU9ueEm"},{name:"PHOENIX ORIGIN",category:"選物",description:"安國附近收藏的選物店，取代原本誤植的 Cafe Sudal。"},{name:"黃生家刀切麵",category:"餐廳",description:"以刀切麵與豆漿麵聞名，是安國午餐候選。"},{name:"TOUT Y EST",category:"包包",description:"車茂熙逛過的包包店，主打簡約皮件與包款。"},{name:"TAMBURINS 三清",category:"香氛",description:"韓國香氛品牌門市，可試聞香水與護手霜。"},{name:"GRANDHAND 北村",category:"香氛",description:"韓國香氛品牌，店內可試聞多款香水與居家香氛。"},{name:"Youssoful 香水",category:"香氛",description:"安國／三清洞一帶的香氛收藏地點。"},{name:"Zero Space",category:"文創",description:"有許多可愛小物與文具的店。"},{name:"無垢屋",category:"選物",description:"安國一帶的選物店，可和香氛店一起順路逛。"}],
+"釜山":[
+{name:"甘川洞文化村",category:"景點",description:"山坡彩色聚落，安排韓服、手翻書與小王子拍照。"},{name:"松島海上纜車",category:"景點",description:"可從高空欣賞松島海岸，並銜接龍宮雲橋。"},{name:"白淺灘文化村",category:"景點",description:"影島海岸聚落，沿海步道與咖啡廳是主要看點。"},{name:"Arte Museum Busan",category:"展覽",description:"以聲光與沉浸式數位藝術為主的展覽館。"},{name:"Busan X the Sky",category:"景點",description:"海雲台高樓觀景台，可看海岸與城市夜景。"},{name:"海雲台膠囊列車",category:"交通體驗",description:"沿海行駛的彩色小車，已預訂尾浦至青沙浦。"},{name:"海東龍宮寺",category:"寺廟",description:"建在海岸岩壁旁的寺廟，是釜山代表性海景景點。"},{name:"周浩鎮的家",category:"地點",description:"8/4 早上先前往的地點。",address:"釜山广域市 东莱区 温泉洞 1214-6",naver:"https://naver.me/GGGeo3tZ"},{name:"Dday 醫院釜山",category:"醫美",description:"南浦洞醫美診所，目前尚未預約。",address:"釜山广域市 中区 南浦洞二街 25-10",naver:"https://naver.me/FBMzkA0j"}]};
 
-const defaultState={budget:50000,rate:0.023,expenses:[
-{id:1,name:'真航空 LJ734',amount:8830,currency:'TWD',category:'機票',status:'已付款'},
-{id:2,name:'中華航空 CI187',amount:823600,currency:'KRW',category:'機票',status:'已付款'},
-{id:3,name:'Hotel Botanik',amount:8448,currency:'TWD',category:'住宿',status:'待付款'},
-{id:4,name:'Gwangalli Hotel 1',amount:913572,currency:'KRW',category:'住宿',status:'待付款'},
-{id:5,name:'Touch Five',amount:3786,currency:'TWD',category:'票券',status:'已付款'},
-{id:6,name:'Yacht Holic',amount:62400,currency:'KRW',category:'票券',status:'已付款'},
-{id:7,name:'膠囊列車',amount:1051,currency:'TWD',category:'交通',status:'已付款'},
-{id:8,name:'eSIM',amount:454,currency:'TWD',category:'網路',status:'已付款'}],packing:[
-{id:1,type:'隨身物品',cat:'證件與金錢',name:'護照',done:false},{id:2,type:'隨身物品',cat:'證件與金錢',name:'信用卡／韓元現金／T-money',done:false},{id:3,type:'隨身物品',cat:'電子用品',name:'手機、eSIM QR Code',done:false},{id:4,type:'隨身物品',cat:'電子用品',name:'行動電源（只能隨身）',done:false},{id:5,type:'隨身物品',cat:'電子用品',name:'充電線、耳機',done:false},{id:6,type:'隨身物品',cat:'飛機與途中',name:'薄外套、眼罩、頸枕',done:false},{id:7,type:'隨身物品',cat:'醫藥',name:'常備藥、暈車藥、止痛藥',done:false},{id:8,type:'隨身物品',cat:'訂單憑證',name:'機票、飯店、KTX、Touch Five、Yacht Holic、釜山 Pass 截圖',done:false},{id:9,type:'托運行李',cat:'衣物',name:'每日衣服、睡衣、內衣褲、襪子',done:false},{id:10,type:'托運行李',cat:'鞋包',name:'好走的鞋、備用包、購物袋',done:false},{id:11,type:'托運行李',cat:'保養化妝',name:'卸妝、洗面乳、保養品、防曬、化妝品',done:false},{id:12,type:'托運行李',cat:'盥洗',name:'牙刷牙膏、髮圈、梳子、衛生用品',done:false},{id:13,type:'托運行李',cat:'汗蒸幕',name:'簡易保養、面膜、換洗內衣褲',done:false},{id:14,type:'托運行李',cat:'電器',name:'韓規雙圓孔轉接頭、延長線',done:false},{id:15,type:'托運行李',cat:'回程預留',name:'折疊旅行袋／行李秤／預留購物空間',done:false}]};
-
-const phrases={'餐廳':[['파 빼주세요','請不要加蔥'],['안 맵게 해주세요','請做不辣'],['따뜻한 물 주세요','請給我溫水'],['계산해 주세요','請結帳']],'購物':[['택스 리펀드 돼요?','可以退稅嗎？'],['카드 돼요?','可以刷卡嗎？'],['다른 사이즈 있어요?','有其他尺寸嗎？']],'計程車':[['여기로 가 주세요','請載我到這裡'],['여기서 내려 주세요','請在這裡讓我下車'],['트렁크를 열어 주세요','請打開後車廂']],'飯店':[['체크인하고 싶어요','我要辦理入住'],['짐을 맡길 수 있나요?','可以寄放行李嗎？'],['택시를 불러 주세요','請幫我叫計程車']],'醫美／髮廊':[['예약했어요','我有預約'],['사진처럼 해 주세요','請照照片這樣做'],['너무 짧지 않게 해 주세요','請不要剪太短'],['얼마나 걸려요?','大約需要多久？'],['많이 아파요?','會很痛嗎？']],'緊急':[['도와주세요','請幫幫我'],['길을 잃었어요','我迷路了'],['병원이 어디예요?','醫院在哪裡？']]};
+const defaultExpenses=[{id:"air-out",name:"真航空去程",amount:8830,currency:"TWD",category:"機票",status:"已付款",scope:"total"},{id:"air-back",name:"華航回程",amount:823600,currency:"KRW",category:"機票",status:"已付款",scope:"total"},{id:"hotel-seoul",name:"Hotel Botanik",amount:8448,currency:"TWD",category:"住宿",status:"待付款",scope:"total"},{id:"hotel-busan",name:"Gwangalli Hotel 1",amount:913572,currency:"KRW",category:"住宿",status:"待付款",scope:"total"},{id:"touch-five",name:"Touch Five",amount:1893,currency:"TWD",category:"票券",status:"已付款",scope:"person"},{id:"yacht",name:"Yacht Holic",amount:62400,currency:"KRW",category:"票券",status:"已付款",scope:"total"},{id:"capsule",name:"膠囊列車",amount:1051,currency:"TWD",category:"交通",status:"已付款",scope:"total"},{id:"esim",name:"eSIM",amount:227,currency:"TWD",category:"網路",status:"已付款",scope:"person"}];
+const defaultPacking=[{id:"c1",type:"隨身物品",category:"證件與金錢",name:"護照",done:false},{id:"c2",type:"隨身物品",category:"證件與金錢",name:"信用卡／金融卡",done:false},{id:"c3",type:"隨身物品",category:"證件與金錢",name:"韓元現金",done:false},{id:"c4",type:"隨身物品",category:"證件與金錢",name:"機票與飯店訂單截圖",done:false},{id:"c5",type:"隨身物品",category:"票券",name:"釜山 Pass 憑證",done:false},{id:"c6",type:"隨身物品",category:"票券",name:"KTX 車票",done:false},{id:"c7",type:"隨身物品",category:"票券",name:"膠囊列車憑證",done:false},{id:"c8",type:"隨身物品",category:"票券",name:"Touch Five QR Code",done:false},{id:"c9",type:"隨身物品",category:"票券",name:"Yacht Holic 付款與預約截圖",done:false},{id:"c10",type:"隨身物品",category:"電子用品",name:"手機",done:false},{id:"c11",type:"隨身物品",category:"電子用品",name:"行動電源（不可托運）",done:false},{id:"c12",type:"隨身物品",category:"電子用品",name:"eSIM QR Code",done:false},{id:"c13",type:"隨身物品",category:"電子用品",name:"充電線與耳機",done:false},{id:"c14",type:"隨身物品",category:"飛機上",name:"薄外套／眼罩",done:false},{id:"c15",type:"隨身物品",category:"醫藥",name:"常備藥與暈車藥",done:false},{id:"c16",type:"隨身物品",category:"其他",name:"T-money 交通卡",done:false},{id:"c17",type:"隨身物品",category:"其他",name:"折疊傘",done:false},{id:"b1",type:"托運行李",category:"衣物",name:"上衣與下身",done:false},{id:"b2",type:"托運行李",category:"衣物",name:"睡衣、內衣褲、襪子",done:false},{id:"b3",type:"托運行李",category:"衣物",name:"好走的鞋與拖鞋",done:false},{id:"b4",type:"托運行李",category:"保養與化妝",name:"卸妝、洗面乳、保養品",done:false},{id:"b5",type:"托運行李",category:"保養與化妝",name:"化妝品與防曬",done:false},{id:"b6",type:"托運行李",category:"保養與化妝",name:"隱形眼鏡與藥水",done:false},{id:"b7",type:"托運行李",category:"盥洗用品",name:"牙刷、牙膏、梳子、髮圈",done:false},{id:"b8",type:"托運行李",category:"汗蒸幕",name:"洗面乳、面膜與備用內衣",done:false},{id:"b9",type:"托運行李",category:"電子用品",name:"韓規雙圓孔轉接頭",done:false},{id:"b10",type:"托運行李",category:"電子用品",name:"多孔延長線",done:false},{id:"b11",type:"托運行李",category:"購物空間",name:"行李秤",done:false},{id:"b12",type:"托運行李",category:"購物空間",name:"折疊購物袋／備用行李袋",done:false}];
+const phrases=[{category:"餐廳",ko:"파 빼주세요.",zh:"請不要加蔥。"},{category:"餐廳",ko:"안 맵게 해 주세요.",zh:"請做不辣。"},{category:"餐廳",ko:"따뜻한 물 주세요.",zh:"請給我溫水。"},{category:"餐廳",ko:"이거 두 개 주세요.",zh:"這個請給我兩份。"},{category:"餐廳",ko:"계산해 주세요.",zh:"請結帳。"},{category:"購物",ko:"입어 봐도 돼요?",zh:"可以試穿嗎？"},{category:"購物",ko:"다른 사이즈 있어요?",zh:"有其他尺寸嗎？"},{category:"購物",ko:"택스 리펀드 돼요?",zh:"可以退稅嗎？"},{category:"購物",ko:"카드로 결제할게요.",zh:"我要刷卡付款。"},{category:"計程車",ko:"여기로 가 주세요.",zh:"請載我到這裡。"},{category:"計程車",ko:"여기에서 내려 주세요.",zh:"請讓我在這裡下車。"},{category:"計程車",ko:"트렁크를 열어 주세요.",zh:"請幫我打開後車廂。"},{category:"飯店",ko:"예약했어요.",zh:"我有預約。"},{category:"飯店",ko:"짐을 맡길 수 있을까요?",zh:"可以寄放行李嗎？"},{category:"飯店",ko:"높은 층으로 부탁드려요.",zh:"麻煩安排高樓層。"},{category:"髮廊／醫美",ko:"사진처럼 해 주세요.",zh:"請做成照片這樣。"},{category:"髮廊／醫美",ko:"너무 짧게 자르지 말아 주세요.",zh:"請不要剪太短。"},{category:"髮廊／醫美",ko:"많이 아파요?",zh:"會很痛嗎？"},{category:"髮廊／醫美",ko:"얼마나 걸려요?",zh:"大約需要多久？"},{category:"緊急",ko:"도와주세요.",zh:"請幫幫我。"},{category:"緊急",ko:"길을 잃었어요.",zh:"我迷路了。"},{category:"緊急",ko:"택시를 불러 주세요.",zh:"請幫我叫計程車。"},{category:"緊急",ko:"화장실이 어디예요?",zh:"廁所在哪裡？"}];
+const defaultState={budgetLimit:50000,rate:.023,rateDate:"",expenses:defaultExpenses,packing:defaultPacking,momMode:false};
