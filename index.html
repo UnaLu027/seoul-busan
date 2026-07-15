@@ -22,7 +22,7 @@
       <div class="intro">
         <div class="route">SEOUL · BUSAN</div>
         <h1>首爾 x 釜山</h1>
-        <p class="subtitle">雖然不能 forever young 但可以去 olive young</p>
+        <p class="subtitle"><span>雖然不能 forever young</span><span>但可以去 olive young</span></p>
         <div class="pill-row">
           <span class="pill">2026.07.30—08.04</span>
           <span class="pill">6 天 5 夜</span>
@@ -36,29 +36,23 @@
         <article class="card flight-card">
           <div class="flight-head"><b>去程｜真航空 LJ734</b><span>7/30</span></div>
           <div class="flight-body">
-            <div class="flight-route">
-              <div class="airport-block"><div class="airport-code serif">TPE T1</div><div class="airport-name">桃園國際機場・第一航廈</div></div>
-              <div class="route-arrow">→</div>
-              <div class="airport-block destination"><div class="airport-code serif">ICN T2</div><div class="airport-name">仁川國際機場・第二航廈</div></div>
-            </div>
-            <div class="flight-time"><div class="info-box"><span>起飛</span><b>01:25</b></div><div class="info-box"><span>抵達</span><b>05:00</b></div></div>
+            <div class="flight-leg"><div class="airport-copy"><div class="airport-code serif">TPE T1</div><div class="airport-name">桃園國際機場・第一航廈</div></div><time>01:25</time></div>
+            <div class="flight-line"><span>↓</span></div>
+            <div class="flight-leg"><div class="airport-copy"><div class="airport-code serif">ICN T2</div><div class="airport-name">仁川國際機場・第二航廈</div></div><time>05:00</time></div>
             <div class="luggage">托運：15 kg × 1 件／人</div>
           </div>
         </article>
         <article class="card flight-card">
           <div class="flight-head"><b>回程｜中華航空 CI187</b><span>8/4</span></div>
           <div class="flight-body">
-            <div class="flight-route">
-              <div class="airport-block"><div class="airport-code serif">PUS T1</div><div class="airport-name">金海國際機場・第一航廈</div></div>
-              <div class="route-arrow">→</div>
-              <div class="airport-block destination"><div class="airport-code serif">TPE T1</div><div class="airport-name">桃園國際機場・第一航廈</div></div>
-            </div>
-            <div class="flight-time"><div class="info-box"><span>起飛</span><b>20:00</b></div><div class="info-box"><span>抵達</span><b>21:20</b></div></div>
+            <div class="flight-leg"><div class="airport-copy"><div class="airport-code serif">PUS T1</div><div class="airport-name">金海國際機場・第一航廈</div></div><time>20:00</time></div>
+            <div class="flight-line"><span>↓</span></div>
+            <div class="flight-leg"><div class="airport-copy"><div class="airport-code serif">TPE T1</div><div class="airport-name">桃園國際機場・第一航廈</div></div><time>21:20</time></div>
             <div class="luggage">托運：23 kg × 2 件／人＋手提行李｜座位 46H</div>
           </div>
         </article>
 
-        <div class="section-title home-hotel-title"><h2>住宿資訊</h2><small>入住、房型與聯絡方式</small></div>
+        <div class="section-title home-hotel-title"><h2>住宿資訊</h2><small>名稱、入住退房與交通</small></div>
         <div class="hotel-grid" id="hotelList"></div>
       </div>
     </section>
@@ -90,7 +84,7 @@
     <section id="budget" class="page budget-sensitive">
       <div class="section page-head">
         <div class="section-title"><h2>旅行預算</h2><small>可修改每人預算與支出</small></div>
-        <article class="card"><div class="budget-head"><label><span class="sub">每人預算（TWD）</span><input id="budgetLimit" class="budget-input" type="number" min="0" step="100"></label><div class="budget-now"><span class="sub">目前估算／人</span><b id="budgetTotal">—</b></div></div><div class="progress"><i id="budgetBar"></i></div><div class="remaining" id="budgetRemaining"></div></article>
+        <article class="card"><div class="budget-head"><label><span class="sub">每人預算（TWD）</span><input id="budgetLimit" class="budget-input" type="number" min="0" step="100"></label><div class="budget-now"><span class="sub">目前估算／人</span><b id="budgetTotal">—</b></div></div><div class="progress budget-progress"><i id="budgetBar"></i></div><div class="remaining" id="budgetRemaining"></div></article>
         <article class="card converter-card"><div class="card-title-row"><h3 class="serif">即時匯率換算</h3><button class="icon-btn" id="refreshRate" type="button">↻</button></div><div class="rate-line" id="rateStatus">正在取得 KRW／TWD 匯率…</div><div class="converter-grid"><label><span>金額</span><input id="convertAmount" type="number" min="0" step="1" value="10000"></label><label><span>方向</span><select id="convertDirection"><option value="KRW_TWD">韓元 → 台幣</option><option value="TWD_KRW">台幣 → 韓元</option></select></label></div><div class="convert-result" id="convertResult">—</div></article>
         <article class="card"><div class="card-title-row"><h3 class="serif">分類支出／人</h3><span class="sub">依目前匯率換算</span></div><div class="category-summary" id="categorySummary"></div></article>
         <article class="card"><div id="expenseList"></div><button class="btn primary full" type="button" onclick="openExpenseModal()">＋ 新增支出</button></article>
@@ -99,17 +93,33 @@
 
     <section id="prep" class="page">
       <div class="section page-head">
-        <div class="section-title"><h2>行前準備</h2><small id="packingProgress">0/0</small></div>
-        <article class="card"><div class="card-title-row"><h3 class="serif">票券與預訂</h3><span class="sub" id="bookingProgress">0/0</span></div><div id="bookingList"></div></article>
-        <article class="card"><div class="packing-tabs" id="packingTabs"></div><div class="progress"><i id="packingBar"></i></div><div id="packingList"></div><button class="btn primary full" type="button" onclick="openPackingModal()">＋ 新增項目</button></article>
-        <article class="card allowance-card"><h3 class="serif">行李額度</h3><div class="allowance-row"><span>去程 LJ734</span><b>15 kg × 1 件／人</b></div><div class="allowance-row"><span>回程 CI187</span><b>23 kg × 2 件／人＋手提</b></div></article>
+        <div class="section-title"><h2>行前準備</h2><small id="prepProgress">準備進度</small></div>
+        <div class="segmented prep-segments" role="tablist">
+          <button type="button" class="segment active" data-prepview="bookings">票券預訂</button>
+          <button type="button" class="segment" data-prepview="packing">行李清單</button>
+          <button type="button" class="segment" data-prepview="entry">入境與登機</button>
+        </div>
+
+        <div id="bookingsPanel" class="prep-panel">
+          <article class="card notes-card"><div class="notes-head"><h3 class="serif">票券與預訂</h3><span class="sub" id="bookingProgress">0/0</span></div><div id="bookingList"></div><button class="add-note" type="button" onclick="appendBooking()">＋ 新增一項</button></article>
+        </div>
+
+        <div id="packingPanel" class="prep-panel hidden">
+          <article class="card notes-card"><div class="packing-tabs" id="packingTabs"></div><div class="progress"><i id="packingBar"></i></div><div id="packingList"></div><button class="add-note" type="button" onclick="appendPacking()">＋ 新增一項</button></article>
+          <article class="card allowance-card"><h3 class="serif">行李額度</h3><div class="allowance-row"><span>去程 LJ734</span><b>15 kg × 1 件／人</b></div><div class="allowance-row"><span>回程 CI187</span><b>23 kg × 2 件／人＋手提</b></div></article>
+        </div>
+
+        <div id="entryPanel" class="prep-panel hidden">
+          <article class="card notes-card"><div class="notes-head"><h3 class="serif">入境與登機</h3><span class="sub" id="entryProgress">0/0</span></div><div id="entryList"></div><button class="add-note" type="button" onclick="appendEntryTask()">＋ 新增一項</button></article>
+          <article class="card info-note"><h3 class="serif">重要提醒</h3><p>韓國電子入境申報免費，應在抵達韓國前 3 天內填寫。SES 為自動通關服務，台灣晶片護照旅客可依現場資格與櫃檯指示辦理，並不是出發前在線上完成。</p><div class="actions"><a class="btn primary" href="https://www.e-arrivalcard.go.kr/portal/main/index.do" target="_blank" rel="noopener">填寫 e-Arrival Card</a><a class="btn white" href="https://www.ses.go.kr/" target="_blank" rel="noopener">查看 SES</a></div></article>
+        </div>
       </div>
     </section>
 
     <section id="language" class="page">
       <div class="section page-head">
-        <div class="section-title"><h2>即時翻譯</h2><small>中文 ⇄ 韓文</small></div>
-        <article class="card translate-card"><div class="translator-controls"><select id="translateDirection"><option value="zh-TW|ko">中文 → 韓文</option><option value="ko|zh-TW">韓文 → 中文</option></select><button class="icon-btn" id="swapLanguage" type="button">⇄</button></div><textarea id="translateInput" rows="4" maxlength="500" placeholder="輸入要翻譯的句子"></textarea><button class="btn primary full" id="translateButton" type="button">翻譯</button><div class="translation-result" id="translationResult">翻譯結果會顯示在這裡</div><div class="actions"><button class="btn soft" id="speakTranslation" type="button">🔊 播放</button><button class="btn white" id="copyTranslation" type="button">複製</button></div></article>
+        <div class="section-title"><h2>Papago 翻譯</h2><small>中文 ⇄ 韓文</small></div>
+        <article class="card translate-card"><div class="translator-controls"><select id="translateDirection"><option value="zh-TW|ko">中文 → 韓文</option><option value="ko|zh-TW">韓文 → 中文</option></select><button class="icon-btn" id="swapLanguage" type="button">⇄</button></div><textarea id="translateInput" rows="5" maxlength="500" placeholder="輸入要翻譯的句子"></textarea><button class="btn papago full" id="papagoButton" type="button">在 Papago 翻譯</button><p class="translator-note">為了使用 Papago 官方翻譯且不把 API 金鑰公開在網站中，按鈕會將文字安全帶到 Papago 官方頁面。</p></article>
         <div class="section-title"><h2>常用韓文</h2><small>按 🔊 直接播放</small></div>
         <article class="card" id="phraseList"></article>
       </div>
@@ -126,8 +136,8 @@
 </div>
 
 <div class="modal" id="expenseModal"><div class="sheet"><div class="sheet-head"><h3 id="expenseModalTitle">新增支出</h3><button class="icon-btn" type="button" onclick="closeModal('expenseModal')">✕</button></div><form class="form" id="expenseForm"><input type="hidden" id="expenseId"><label><span>項目名稱</span><input id="expenseName" required></label><div class="form-grid"><label><span>金額</span><input id="expenseAmount" type="number" min="0" step="0.01" required></label><label><span>幣別</span><select id="expenseCurrency"><option>TWD</option><option>KRW</option></select></label></div><div class="form-grid"><label><span>分類</span><select id="expenseCategory"><option>機票</option><option>住宿</option><option>交通</option><option>票券</option><option>網路</option><option>美容</option><option>餐飲</option><option>購物</option><option>其他</option></select></label><label><span>計價</span><select id="expenseScope"><option value="total">兩人總價</option><option value="person">每人價格</option></select></label></div><label><span>狀態</span><select id="expenseStatus"><option>已付款</option><option>待付款</option><option>現場預算</option></select></label><button class="btn primary full" type="submit">儲存</button></form></div></div>
-<div class="modal" id="packingModal"><div class="sheet"><div class="sheet-head"><h3 id="packingModalTitle">新增行李項目</h3><button class="icon-btn" type="button" onclick="closeModal('packingModal')">✕</button></div><form class="form" id="packingForm"><input type="hidden" id="packingId"><label><span>物品名稱</span><input id="packingName" required></label><div class="form-grid"><label><span>行李類型</span><select id="packingTypeInput"><option>隨身物品</option><option>托運行李</option></select></label><label><span>細項分類</span><input id="packingCategory" required></label></div><button class="btn primary full" type="submit">儲存</button></form></div></div>
 <script src="data.js"></script>
+<script src="overrides.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
