@@ -1,7 +1,7 @@
 // Supabase public frontend configuration.
-// Fill these two values after creating the Supabase project.
+// Only the public Project URL and Publishable key belong in this file.
 window.SUPABASE_CONFIG = {
-  url: '',
-  publishableKey: '',
+  url: 'https://bapgwlijsazvjoshqglf.supabase.co',
+  publishableKey: 'sb_publishable_2V5kPYLtP4XspNBRGFReIw_EeunFujN',
   tripId: 'seoul-busan-2026'
 };
