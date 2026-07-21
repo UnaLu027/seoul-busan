@@ -75,7 +75,7 @@
   const clonePatch = () => JSON.parse(JSON.stringify(patch));
 
   function upsertPlace(district, place) {
-    if (!window.places) return;
+    if (typeof places === 'undefined') return;
     if (!Array.isArray(places[district])) places[district] = [];
     const list = places[district];
     const index = list.findIndex(item => item.naver === place.naver || item.name === place.name);
@@ -84,7 +84,7 @@
   }
 
   function addBusanPlaces() {
-    if (!window.P || !window.places) return;
+    if (typeof P !== 'function' || typeof places === 'undefined') return;
     upsertPlace('西面', P('Genius 西面店','醫美','已安排 8/4 進行醫美療程。','부산광역시 부산진구 중앙대로691번길 5 천우빌딩 3층','','지니어스의원 부산'));
     upsertPlace('西面', P('Ilhwa Jeongyeontan 八爪魚','餐廳','西面八爪魚午餐，安排在醫美後。','부산광역시 부산진구 부전동 158-9','https://naver.me/5JqTQtmz'));
     upsertPlace('廣安里', P('All Sunday Bagel','麵包','廣安里海景貝果店，安排為 8/4 早餐。','부산광역시 수영구 광안로61번길 28 1층','','All Sunday Bagel Gwangalli'));
@@ -95,7 +95,7 @@
   }
 
   function applyLocalPatch(force = false) {
-    if (!Array.isArray(window.itinerary)) return;
+    if (typeof itinerary === 'undefined' || !Array.isArray(itinerary)) return;
     const index = itinerary.findIndex(day => day.date === '8/4');
     if (index < 0) itinerary.push(clonePatch());
     else if (force || itinerary[index].revision !== REVISION) itinerary[index] = clonePatch();
