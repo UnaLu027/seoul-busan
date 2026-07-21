@@ -1,6 +1,6 @@
 // One-time shared update for the 2026/08/04 itinerary.
 (() => {
-  const REVISION = '2026-07-21-day84-v1';
+  const REVISION = '2026-07-21-day84-v2';
   const patch = {
     date: '8/4',
     title: '廣安里・西面醫美・返台',
@@ -8,8 +8,8 @@
     events: [
       {
         time: '07:30–08:00',
-        title: 'Hotel 1 Check-out・整理行李',
-        detail: '退房後帶行李出發；請先向 Genius 西面店確認是否能寄放行李。',
+        title: 'Hotel 1 Check-out・寄放行李',
+        detail: '退房後將行李寄放在 Hotel 1，下午逛完廣安里後再回飯店取行李。',
         map: 'Gwangalli Hotel 1'
       },
       {
@@ -27,7 +27,7 @@
       {
         time: '10:00–10:30',
         title: '廣安里 → Genius 西面店',
-        detail: '帶行李建議直接搭計程車前往。',
+        detail: '行李已寄放 Hotel 1，可直接搭計程車前往西面。',
         map: '지니어스의원 부산'
       },
       {
@@ -46,15 +46,15 @@
       },
       {
         time: '15:30–17:00',
-        title: '廣安里逛街・Kitty 蛋糕',
-        detail: '時間包含從西面移動。必去 Soteu Kitty 蛋糕，並順逛 LOYBE store、Presenthing by ADOR、粉紅家；順序依現場彈性調整。',
+        title: '廣安里逛街・Kitty 蛋糕・取行李',
+        detail: '時間包含從西面移動。必去 Soteu Kitty 蛋糕，並順逛 LOYBE store、Presenthing by ADOR、粉紅家；逛完回 Hotel 1 取行李。',
         map: 'Gwangalli Beach Busan',
         naver: 'https://naver.me/GM3jv5WL'
       },
       {
         time: '17:00–18:00',
-        title: '廣安里 → 金海國際機場',
-        detail: '帶行李直接搭計程車，前往金海機場第一航廈。',
+        title: 'Hotel 1 → 金海國際機場',
+        detail: '取回寄放行李後直接搭計程車，前往金海機場第一航廈。',
         map: 'Gimhae International Airport Terminal 1'
       },
       {
