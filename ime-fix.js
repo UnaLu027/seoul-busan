@@ -81,4 +81,14 @@
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') flushDeferredRenders();
   });
+
+  // Load the one-time shared itinerary update after the app and cloud client
+  // are ready. The migration is revision-tagged, so later front-end edits are
+  // not repeatedly overwritten.
+  if (!document.querySelector('script[data-day84-migration]')) {
+    const migration = document.createElement('script');
+    migration.src = 'day84-migration.js';
+    migration.dataset.day84Migration = 'true';
+    document.body.appendChild(migration);
+  }
 })();
