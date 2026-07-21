@@ -92,25 +92,12 @@ try{
 renderHotels();
 renderPhrases();
 
-// Load the optional shared-cloud layer. It also provides local itinerary editing
-// when Supabase has not been configured yet.
-(function loadCloudLayer(){
-  const style=document.createElement('link');
-  style.rel='stylesheet';
-  style.href='cloud-sync.css';
-  document.head.appendChild(style);
-
-  const loadScript=src=>new Promise((resolve,reject)=>{
-    const script=document.createElement('script');
-    script.src=src;
-    script.onload=resolve;
-    script.onerror=reject;
-    document.body.appendChild(script);
-  });
-
-  (async()=>{
-    try{await loadScript('supabase-config.js')}catch(error){console.warn('Supabase config could not be loaded',error)}
-    try{await loadScript('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2')}catch(error){console.warn('Supabase library could not be loaded; local editing remains available',error)}
-    try{await loadScript('cloud-sync.js')}catch(error){console.error('Cloud editor could not be loaded',error)}
-  })();
-})();
+// cloud-sync.js is loaded once by index.html. Load the iOS IME safeguard only
+// after every normal script has finished, so it can wrap the final renderers.
+window.addEventListener('load',()=>{
+  if(document.querySelector('script[data-ime-fix]'))return;
+  const script=document.createElement('script');
+  script.src='ime-fix.js';
+  script.dataset.imeFix='true';
+  document.body.appendChild(script);
+},{once:true});
