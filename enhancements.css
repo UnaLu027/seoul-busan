@@ -21,10 +21,35 @@ button,input,select,textarea{font-weight:500}
 .phrase-row .subline{margin-top:4px;font-size:.82rem}
 .phrase-tools{display:flex;gap:6px;flex:0 0 auto}
 .phrase-tools .icon-btn{min-width:42px;min-height:42px}
+
+/* One vertical rhythm for page titles, controls, status bars and content. */
+:root{--page-stack-gap:18px}
+.page-head{display:grid;gap:var(--page-stack-gap)}
+.page-head>.section-title{margin:0 2px}
+.page-head>.segmented,
+.page-head>.cloud-toolbar,
+.page-head>.card,
+.page-head>.prep-panel,
+.page-head>.phrase-category-tabs,
+.page-head>#phraseList{margin-top:0;margin-bottom:0}
+.prep-segments{margin-bottom:0}
+.prep-panel{display:grid;gap:var(--page-stack-gap);min-width:0}
+.prep-panel>.card{margin:0}
+.entry-guide{gap:var(--page-stack-gap)!important}
+.entry-guide>.entry-guide-card{margin:0!important}
+#trip .page-head{padding-bottom:var(--page-stack-gap)}
+#trip .days{padding-top:0;padding-bottom:var(--page-stack-gap)}
+#trip .compact-top{padding-top:0}
+#trip .itinerary-card{margin-bottom:0}
+#language .phrase-title{margin-top:0}
+#language .phrase-category-tabs{padding-bottom:0}
+.hotel-grid>.card{margin-bottom:0}
+
 body.mom .translation-result{font-size:1.3rem}
 body.mom .phrase-korean{font-size:1.35rem}
 body.mom .phrase-row .subline{font-size:1.08rem}
 @media(max-width:430px){
+  :root{--page-stack-gap:16px}
   .translation-actions,.translation-tools{grid-template-columns:1fr}
   .phrase-category-button{padding:10px 13px}
 }
